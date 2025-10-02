@@ -82,17 +82,17 @@ section:first-child {
   background-color: white;
 }
 
-.card-media {
+.event-card .card-media {
   width: 100%;
   aspect-ratio: 393/240;
   background: url("../public/theatre.jpg");
 }
 
-.card-header, .card-content {
+.event-card .card-header, .event-card .card-content {
   padding: 16px;
 }
 
-.card-action {
+.event-card .card-action {
   padding: 8px;
 }
 
@@ -100,7 +100,75 @@ section:first-child {
   gap: 50px;
 }
 
-h1 span, h2 span {
+#why .block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  gap: 30px;
+}
+
+.why-card {
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  padding: 40px 50px;
+  align-items: center;
+}
+
+#who {
+  gap: 50px;
+}
+
+#who .block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.who-card {
+  display: flex;
+  gap: 40px;
+  padding: 0 40px 0 0;
+  border-radius: 10px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.who-card.reverse {
+  flex-direction: row-reverse;
+  padding: 0 0 0 40px;
+}
+
+.who-card .card-media {
+  width: 100%;
+  aspect-ratio: 580/344;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.who-card img {
+  width: 110%;
+}
+
+.who-card .card-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.who-card h4 {
+  text-align: center;
+}
+
+#try {
+  justify-content: center;
+  gap: 30px;
+}
+
+h1 span, h2 span, h4 span {
   color: var(--secondary);
 }
 

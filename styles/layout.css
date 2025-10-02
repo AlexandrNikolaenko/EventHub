@@ -17,5 +17,12 @@ header .wrapper {
 
 footer {
   width: 100%;
-  padding-top: 20px;
+  padding: 16px 0;
+  background-color: white;
+}
+
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
