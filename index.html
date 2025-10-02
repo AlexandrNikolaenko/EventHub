@@ -5,23 +5,149 @@
     <meta name="keywords" content="мероприятия, афиша, бронирование, события">
     <meta name="description" content="Система управления событиями: афиша, бронирование и организация мероприятий">
     <title>EventHub — афиша мероприятий</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <header>
-        <div class="logo">🎫</div>
-        <h1 class="site-title">EventHub</h1>
-        <nav>
-            <ul class="nav-menu">
-                <li><a href="./index.html">Главная</a></li>
-                <li><a href="#">События</a></li>
-                <li><a href="./about.html">О нас</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
-        </nav>
+            <nav class="wrapper">
+            <a class="h6 logo" href="./index.html">
+                Together
+            </a>
+            <button class="primary">
+                Войти
+            </button>
+            </nav>
     </header>
-
     <main>
+        <section id="preview">
+            <div class="block">
+                <h1>
+                    <span>Организуй</span> встречи с друзьями <span>легко</span>
+                </h1>
+                <h6>
+                    Создавай свои события или выбирай готовые из афиши. <br>
+    Друзья голосуют за удобное время и место — решение находится само.
+                </h6>
+                <button class="secondary">
+                    Перейти в личный кабинет
+                </button>
+            </div>
+        </section>
+        <section id="steps">
+            <h2>
+                <span>4 шага</span> к идеальной встрече
+            </h2>
+            <div class="block">
+                <div class="step-card">
+                    <h4>
+                        Шаг 1
+                    </h4>
+                    <h5>
+                        Создай событие
+                    </h5>
+                    <p class="body1">
+                        придумай встречу и предложи несколько вариантов даты и места.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <h4>
+                        Шаг 2
+                    </h4>
+                    <h5>
+                        Зови друзей
+                    </h5>
+                    <p class="body1">
+                        приглашай прямо из приложения, все видят детали.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <h4>
+                        Шаг 3
+                    </h4>
+                    <h5>
+                        Голосуйте вместе
+                    </h5>
+                    <p class="body1">
+                        каждый выбирает удобное время и локацию.
+                    </p>
+                </div>
+                <div class="step-card">
+                    <h4>
+                        Шаг 4
+                    </h4>
+                    <h5>
+                        Итог без споров
+                    </h5>
+                    <p class="body1">
+                        приложение само показывает лучший вариант.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="events">
+            <div class="head">
+                <h2>
+                    Не хочешь <span>придумывать</span> сам?
+                </h2>
+                <h5>
+                    Выбирай из готовых событий в городе — концерты, выставки, вечеринки и многое другое. Добавляй в список и приглашай друзей в один клик.
+                </h5>
+            </div>
+            <ul class="wrapper">
+                <li class="event-card">
+                    <div class="card-media"></div>
+                    <div class="card-header h5">
+                        Название события
+                    </div>
+                    <div class="card-content body1">
+                        Lorem ipsum dolor sit amet consectetur. Morbi est massa senectus purus pellentesque quis turpis massa.
+                    </div>
+                    <div class="card-action">
+                        <button data-id="0" class="primary">Посмотреть</button>
+                    </div>
+                </li>
+                <li class="event-card">
+                    <div class="card-media"></div>
+                    <div class="card-header h5">
+                        Название события
+                    </div>
+                    <div class="card-content body1">
+                        Lorem ipsum dolor sit amet consectetur. Morbi est massa senectus purus pellentesque quis turpis massa.
+                    </div>
+                    <div class="card-action">
+                        <button data-id="1" class="primary">Посмотреть</button>
+                    </div>
+                </li>
+                <li class="event-card">
+                    <div class="card-media"></div>
+                     <div class="card-header h5">
+                        Название события
+                    </div>
+                    <div class="card-content body1">
+                        Lorem ipsum dolor sit amet consectetur. Morbi est massa senectus purus pellentesque quis turpis massa.
+                    </div>
+                    <div class="card-action">
+                        <button data-id="2" class="primary">Посмотреть</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="wrapper" style="width: 100%; display: flex; flex-direction: row-reverse;">
+                <button class="primary" id="btton-show-all-events">
+                    Посмотреть все
+                </button>
+            </div>
+        </section>
+        <section id="why">
+            <h2>
+                Почему это <span>удобно</span>?
+            </h2>
+            <div class="block">
+                
+            </div>
+        </section>
+    </main>
+    <!-- <main>
         <section class="page-head">
             <h2 class="page-title">Афиша мероприятий</h2>
             
@@ -66,6 +192,6 @@
     <footer>
         <p>© 2025 EventHub. Все права защищены.</p>
         <p>Адрес: г. Москва, ул. Примерная, 1</p>
-    </footer>
+    </footer> -->
 </body>
 </html>

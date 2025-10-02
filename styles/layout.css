@@ -1,0 +1,21 @@
+/* стилизация шапки */
+
+header {
+  width: 100%;
+  position: fixed;
+  padding: 16px 0;
+  background-color: white;
+}
+
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* стилизация подвала */
+
+footer {
+  width: 100%;
+  padding-top: 20px;
+}

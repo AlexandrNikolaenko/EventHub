@@ -1,0 +1,125 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');  
+@import url("./layout.css");
+
+:root {
+  --primary: #263238;
+  --primary-dark: #212121;
+  --primary-light: #607D8B;
+  --primary-contrast-text: #ECEFF1;
+  --secondary: #304FFE;
+  --secondary-dark: #1A237E;
+  --secondary-light: #536DFE;
+  --secondary-contrast: #ECEFF1;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-contrast-text);
+}
+
+.logo {
+  color: var(--primary-dark);
+}
+
+button {
+  border-radius: 10px;
+  padding: 8px 22px;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.46px;
+  font-weight: 500;
+  border: none;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: var(--primary-contrast-text);
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  color: var(--primary);
+}
+
+a {
+  text-decoration: none;
+  appearance: none;
+}
+
+h1, .h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 116.7%;
+  letter-spacing: -1.5px;
+}
+
+h2, .h2 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.5px;
+}
+
+h3, .h3 {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 116.7%;
+  letter-spacing: 0;
+}
+
+h4, .h4 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 123.5%;
+  letter-spacing: 0.25px;
+}
+
+h5, .h5 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 133.4%;
+  letter-spacing: 0;
+}
+
+h6, .h6 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.15px;
+}
+
+.body1 {
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.15px;
+  font-weight: 400;
+}
+
+button.primary {
+  background-color: var(--primary);
+  color: var(--primary-contrast-text);
+}
+
+button.secondary {
+  background-color: var(--secondary);
+  color: var(--primary-contrast-text);
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  .wrapper {
+    margin: 0;
+    padding: 0 100px;
+    max-width: 100%;
+  }
+}
