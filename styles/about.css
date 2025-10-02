@@ -1,0 +1,53 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100vh;
+}
+
+.h6:first-child {
+  text-align: center;
+  max-width: 1000px;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+h1 {
+  padding-top: 203px;
+  color: var(--secondary);
+}
+
+.h6 strong {
+  color: var(--secondary);
+}
+
+blockquote {
+    font-style: italic;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    border-left: 4px solid var(--secondary);
+    padding: 10px;
+    margin: 15px 0;
+}
+
+pre {
+    background: #222;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: "Courier New", monospace;
+}
