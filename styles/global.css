@@ -26,6 +26,7 @@ body {
 
 .logo {
   color: var(--primary-dark);
+  text-transform: uppercase;
 }
 
 button {
