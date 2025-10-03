@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="мероприятия, афиша, бронирование, события">
     <meta name="description" content="Система управления событиями: афиша, бронирование и организация мероприятий">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <header>
-            <nav class="wrapper">
+        <nav class="wrapper">
             <a class="h6 logo" href="./index.html">
                 Together
             </a>
-            <div>
+            <div class="header__nav-list">
+                <a href="./index.html">Главная</a>
+                <a href="./create-event.html">Создать событие</a>
                 <a href="./about.html">О нас</a>
                 <a href="./login.html">
-                    <button class="primary">
+                    <button class="primary header__button-enter">
                         Войти
                     </button>
                 </a>
+                <a class="my-events" href="./main.html" >
+                    Мои события
+                </a>
             </div>
-            </nav>
+            <div class="header__menu">
+                <button id="menu-bar">
+                    <img src="./public/menu.svg">
+                </button>
+                <div id="header__menu__list" class="disable">
+                    <a href="./index.html">Главная</a>
+                    <a href="./create-event.html">Создать событие</a>
+                    <a href="./about.html">О нас</a>
+                    <a href="./login.html">
+                        <button class="primary">
+                            Войти
+                        </button>
+                    </a>
+                    <a class="my-events" href="./main.html" >
+                        Мои события
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <section id="preview">
@@ -34,7 +58,7 @@
                     Создавай свои события или выбирай готовые из афиши. <br>
     Друзья голосуют за удобное время и место — решение находится само.
                 </h6>
-                <button class="secondary">
+                <button class="secondary shadow-base">
                     Перейти в личный кабинет
                 </button>
             </div>
@@ -43,7 +67,7 @@
             <h2>
                 <span>4 шага</span> к идеальной встрече
             </h2>
-            <div class="block">
+            <div class="block wrapper">
                 <div class="step-card">
                     <h4>
                         Шаг 1
@@ -181,7 +205,7 @@
             <div class="block wrapper">
                 <div class="who-card">
                     <div class="card-media">
-                        <img src="./public/friends.jpeg">
+                        <img src="./public/friends.jpeg" title="Встреча с друзьмяи">
                     </div>
                     <div class="card-content">
                         <h4>
@@ -191,7 +215,7 @@
                 </div>
                 <div class="who-card reverse">
                     <div class="card-media">
-                        <img src="./public/culture-event.jpg">
+                        <img src="./public/culture-event.jpg" title="Культорное событие">
                     </div>
                     <div class="card-content">
                         <h4>
@@ -201,7 +225,7 @@
                 </div>
                 <div class="who-card">
                     <div class="card-media">
-                        <img src="./public/camp.jpeg">
+                        <img src="./public/camp.jpeg" title="Активности на природе">
                     </div>
                     <div class="card-content">
                         <h4>
@@ -211,7 +235,7 @@
                 </div>
                 <div class="who-card reverse">
                     <div class="card-media">
-                        <img src="./public/messangers.jpg">
+                        <img src="./public/messangers.jpg" title="Мессенджеры">
                     </div>
                     <div class="card-content">
                         <h4>
@@ -228,7 +252,7 @@
             <h5>
                 Организуй своё первое событие за 2 минуты и собери друзей легко.
             </h5>
-            <button class="secondary">
+            <button class="secondary shadow-base">
                 Запланировать событие
             </button>
         </section>
@@ -240,5 +264,6 @@
             <p>Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
+    <script src="./scripts/header.js"></script>
 </body>
 </html>

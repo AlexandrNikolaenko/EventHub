@@ -11,6 +11,16 @@
   --secondary-dark: #1A237E;
   --secondary-light: #536DFE;
   --secondary-contrast: #ECEFF1;
+  --shadow-base: drop-shadow(0px 8px 10px rgba(0, 0, 0, .25));
+  --shadow-light: drop-shadow(0px 4px 5px rgba(0, 0, 0, .15))
+}
+
+.shadow-base {
+  filter: var(--shadow-base);
+}
+
+.shadow-light {
+  filter: var(--shadow-light);
 }
 
 * {

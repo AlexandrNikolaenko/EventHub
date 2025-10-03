@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="мероприятия, афиша, бронирование, события">
     <meta name="description" content="Система управления событиями: афиша, бронирование и организация мероприятий">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/login.css">
 </head>
 <body>
     <header>
-            <nav class="wrapper">
+        <nav class="wrapper">
             <a class="h6 logo" href="./index.html">
                 Together
             </a>
-            <div>
+            <div class="header__nav-list">
+                <a href="./index.html">Главная</a>
+                <a href="./create-event.html">Создать событие</a>
                 <a href="./about.html">О нас</a>
                 <a href="./login.html">
-                    <button class="primary">
+                    <button class="primary header__button-enter">
                         Войти
                     </button>
                 </a>
             </div>
-            </nav>
+            <div class="header__menu">
+                <button id="menu-bar">
+                    <img src="./public/menu.svg">
+                </button>
+                <div id="header__menu__list" class="disable">
+                    <a href="./index.html">Главная</a>
+                    <a href="./create-event.html">Создать событие</a>
+                    <a href="./about.html">О нас</a>
+                    <a href="./login.html">
+                        <button class="primary">
+                            Войти
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <form>
@@ -42,5 +60,6 @@
             <p>Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
+    <script src="./scripts/header.js"></script>
 </body>
 </html>

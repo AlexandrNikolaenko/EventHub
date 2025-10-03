@@ -1,6 +1,7 @@
 /* стилизация шапки */
 
 header {
+  z-index: 100;
   width: 100%;
   position: fixed;
   padding: 16px 0;
@@ -13,12 +14,70 @@ header .wrapper {
   align-items: center;
 }
 
-nav div {
+.header__nav-list {
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
+header .button-enter {
+  filter: var(--shadow-light);
+}
+
+.header__menu {
+  display: none;
+  position: relative;
+}
+@media screen and (max-width: 640px) {
+  .header__nav-list {
+    display: none;
+  }
+  .header__menu {
+    display: block;
+  }
+}
+
+#menu-bar{
+  padding: 0;
+  background: none;
+  line-height: 0;
+}
+
+.my-events {
+  display: none;
+}
+
+.my-events.active {
+  display: block;
+}
+
+#header__menu__list.disable {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  filter: var(--shadow-base);
+  padding: 20px;
+  width: 80vw;
+  right: -80%;
+  top: 60px;
+}
+
+#header__menu__list.enable {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: white;
+  border-radius: 10px;
+  filter: var(--shadow-base);
+  padding: 20px;
+  width: 80vw;
+  right: -80%;
+  top: 60px;
+}
 /* стилизация подвала */
 
 footer {

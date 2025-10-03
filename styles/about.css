@@ -51,6 +51,7 @@ ul li {
   padding: 20px;
   border-radius: 10px;
   background-color: white;
+  filter: var(--shadow-light);
 }
 
 ul li span {
@@ -73,6 +74,7 @@ ol li {
   width: 100%;
   background-color: white;
   border-radius: 10px;
+  filter: var(--shadow-light);
 }
 
 .step-arrow {
@@ -112,6 +114,7 @@ blockquote {
     border-left: 4px solid var(--secondary);
     padding: 10px;
     margin: 15px 0;
+    filter: var(--shadow-light);
 }
 
 pre {
