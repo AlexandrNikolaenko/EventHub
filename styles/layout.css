@@ -13,6 +13,12 @@ header .wrapper {
   align-items: center;
 }
 
+nav div {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
 /* стилизация подвала */
 
 footer {

@@ -14,12 +14,14 @@
             <a class="h6 logo" href="./index.html">
                 Together
             </a>
-            <a href="./about.html">О нас</a>
-            <a href="./login.html">
-                <button class="primary">
-                    Войти
-                </button>
-            </a>
+            <div>
+                <a href="./about.html">О нас</a>
+                <a href="./login.html">
+                    <button class="primary">
+                        Войти
+                    </button>
+                </a>
+            </div>
             </nav>
     </header>
 
@@ -33,8 +35,6 @@
               заслуживают удобного планирования.
           </p>
         </section>
-        
-
         <section>
             <h2>Наша миссия</h2>
             <blockquote>
@@ -42,29 +42,30 @@
                 <cite>— команда EventHub</cite>
             </blockquote>
         </section>
-
         <section>
             <h2>Что мы предлагаем</h3>
             <ul>
-                <li>Афишу публичных мероприятий с удобным бронированием</li>
-                <li>Закрытые события для компаний и друзей</li>
-                <li>Личный кабинет с историей участия</li>
-                <li>Уведомления и напоминания</li>
+                <li><span>1</span><p class="body1">Афишу публичных мероприятий с удобным бронированием</p></li>
+                <li><span>2</span><p class="body1">Закрытые события для компаний и друзей</p></li>
+                <li><span>3</span><p class="body1">Личный кабинет с историей участия</p></li>
+                <li><span>4</span><p class="body1">Уведомления и напоминания</p></li>
             </ul>
         </section>
-
         <section>
             <h2>Как работает система</h2>
             <ol>
-                <li>Пользователь выбирает мероприятие из афиши или создаёт своё.</li>
-                <li>Бронирует место или рассылает приглашения.</li>
-                <li>Получает подтверждение и наслаждается событием 🎉</li>
+                <li class="body1">Пользователь выбирает мероприятие из афиши или создаёт своё.</li>
+                <div class="step-arrow"></div>
+                <li class="body1">Бронирует место или рассылает приглашения.</li>
+                <div class="step-arrow"></div>
+                <li class="body1">Получает подтверждение и наслаждается событием 🎉</li>
             </ol>
         </section>
-
-        <section>
-            <h2>Сниппет кода</h2>
-            <p>Ниже пример, как может выглядеть бронирование события в будущем API:</p>
+        <section class="code-section">
+            <div>
+                <h2>Сниппет кода</h2>
+                <p>Ниже пример, как может выглядеть бронирование события в будущем API:</p>
+            </div>
             <pre><code>
 // Пример REST-запроса
 POST /api/bookings
@@ -74,16 +75,14 @@ POST /api/bookings
 }
             </code></pre>
         </section>
-
-        <section>
-            <h3>Философия</h3>
-            <p>
+        <section class="phylosofy-section">
+            <h2>Философия</h2>
+            <p class="body1">
                 Мы <del>не любим хаос</del> <ins>ценим порядок</ins> в организации мероприятий, 
                 поэтому EventHub создан для тех, кто хочет планировать легко.
             </p>
         </section>
     </main>
-
     <footer>
         <div class="wrapper">
             <span class="h6 logo">Together</span>

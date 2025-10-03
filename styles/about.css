@@ -1,18 +1,25 @@
 main {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 157px;
   align-items: center;
+}
+
+section:first-child {
+  padding-top: 203px;
+}
+
+section:last-child {
+  padding-bottom: 157px;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  min-height: 100vh;
+  gap: 36px;
 }
 
-.h6:first-child {
+p.h6 {
   text-align: center;
   max-width: 1000px;
 }
@@ -22,11 +29,78 @@ h1, h2, h3 {
 }
 
 h1 {
-  padding-top: 203px;
   color: var(--secondary);
 }
 
 .h6 strong {
+  color: var(--secondary);
+}
+
+ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+ul li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+ul li span {
+  font-size: 96px;
+  line-height: 80px;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+ol {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+ol li {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.step-arrow {
+  background: url('../public/step-arrow.svg');
+  min-width: 48px;
+  height: 48px;
+}
+
+.code-section div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.phylosofy-section {
+  display: flex;
+  max-width: 581px;
+}
+
+.phylosofy-section p {
+  text-align: center;
+}
+
+.phylosofy-section del {
+  color: var(--primary-light);
+}
+
+.phylosofy-section ins {
   color: var(--secondary);
 }
 
