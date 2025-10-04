@@ -43,15 +43,20 @@
         </nav>
     </header>
     <main>
-        <form id="login">
+        <form id="register">
+          <label for="name" class="body1">Введите почту</label>
+          <input id="name" autocomplete="off" name="name" placeholder="Name" type="name" >
           <label for="email" class="body1">Введите почту</label>
           <input id="email" autocomplete="off" name="email" placeholder="Email" type="email" >
           <span class="body1" id="email-error">Почта введена некорректно</span>
           <label for="password" class="body1">Введите пароль</label>
           <input id="password" name="password" placeholder="Password" type="password" >
-          <span class="body1" id="password-error">Неверный пароль</span>
+          <span class="body1" id="password-error">Длина пароля не менее 8 символов</span>
+          <label for="repassword" class="body1">Повторите пароль</label>
+          <input id="repassword" name="repassword" placeholder="Return Password" type="password" >
+          <span class="body1" id="repassword-error">Пароли должны совпадать</span>
           <button class="primary" type="submit">
-            Войти
+            Зарегистрироваться
           </button>
         </form>
     </main>
@@ -63,5 +68,6 @@
         </div>
     </footer>
     <script src="./scripts/header.js"></script>
+    <script src="./scripts/register.cjs"></script>
 </body>
 </html>

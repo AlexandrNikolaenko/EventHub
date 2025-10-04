@@ -1,3 +1,5 @@
+// мобильное меню
+
 const menuButton = document.getElementById('menu-bar');
 const menuList = document.getElementById('header__menu__list');
 
@@ -7,3 +9,6 @@ function handleChangeVisible() {
 }
 
 menuButton.addEventListener('click', handleChangeVisible);
+
+// вход в аккаунт пользователя
+
