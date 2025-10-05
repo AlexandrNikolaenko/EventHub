@@ -1,3 +1,5 @@
+import { user } from "./api";
+
 // мобильное меню
 
 const menuButton = document.getElementById('menu-bar');
@@ -12,3 +14,11 @@ menuButton.addEventListener('click', handleChangeVisible);
 
 // вход в аккаунт пользователя
 
+console.log(user);
+
+if (user.email) {
+  const links = document.getElementsByClassName('my-events');
+  Array.from(links).forEach(link => {
+    link.classList.add('active');
+  });
+}

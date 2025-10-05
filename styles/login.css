@@ -35,3 +35,12 @@ span {
 span.active {
   display: block;
 }
+
+p.body1 {
+  width: 100%;
+  text-align: center;
+}
+
+p.body1 a {
+  color: var(--secondary);
+}

@@ -2,7 +2,7 @@
 
 import { register } from "./api.js";
 
-const formRegister = document.getElementById('login');
+const formRegister = document.getElementById('register');
 
 function validation (values) {
   let errors = [];
@@ -20,18 +20,18 @@ function validation (values) {
 
 function initState() {
   const messages = document.getElementsByTagName('span');
-  messages.forEach(message => {
+  
+  Array.from(messages).forEach(message => {
     message.classList.remove('active');
   })
 }
 
 function handleSubmit(e) {
-  console.log('here');
   e.preventDefault();
   initState();
-  const values = e.target.value;
+  const values = Object.fromEntries(new FormData(e.target));
   const errors = validation(values);
-  if (errors) {
+  if (errors.length != 0) {
     errors.forEach((error) => {
       const message = document.getElementById(error.type + '-error');
       message.classList.add('active');
@@ -41,10 +41,14 @@ function handleSubmit(e) {
     try {
       register(values);
     } catch(err) {
-      const error = JSON.parse(err.message);
-      const message = document.getElementById(error.type + '-error');
-      message.classList.add('active');
-      message.textContent(error.message);
+      try {
+        const error = JSON.parse(err.message);
+        const message = document.getElementById(error.type + '-error');
+        message.classList.add('active');
+        message.textContent(error.message);
+      } catch(e) {
+        console.log(e);
+      }
     }
   }
 }
