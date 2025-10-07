@@ -5,6 +5,7 @@ header {
   position: fixed;
   padding: 16px 0;
   background-color: white;
+  filter: var(--shadow-light);
 }
 
 header .wrapper {
@@ -17,6 +18,10 @@ nav div {
   display: flex;
   gap: 40px;
   align-items: center;
+}
+
+header .button-enter {
+  filter: var(--shadow-light);
 }
 
 /* стилизация подвала */
