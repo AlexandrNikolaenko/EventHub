@@ -2,10 +2,12 @@
 
 header {
   width: 100%;
+  max-width: 100vw;
   position: fixed;
   padding: 16px 0;
   background-color: white;
   filter: var(--shadow-light);
+  z-index: 100;
 }
 
 header .wrapper {
