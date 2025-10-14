@@ -20,7 +20,15 @@ header .wrapper {
   align-items: center;
 }
 
-header .button-enter {
+header .header__button-enter {
+  filter: var(--shadow-light);
+}
+
+.header__button-enter.hide {
+  display: none;
+}
+
+.logout {
   filter: var(--shadow-light);
 }
 
@@ -43,11 +51,11 @@ header .button-enter {
   line-height: 0;
 }
 
-.my-events {
+.logout {
   display: none;
 }
 
-.my-events.active {
+.logout.active {
   display: block;
 }
 

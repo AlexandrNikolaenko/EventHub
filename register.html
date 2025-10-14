@@ -18,13 +18,16 @@
             </a>
             <div class="header__nav-list">
                 <a href="./index.html">Главная</a>
-                <a href="./create-event.html">Создать событие</a>
+                <a href="./main.html">Создать событие</a>
                 <a href="./about.html">О нас</a>
-                <a href="./login.html">
-                    <button class="primary header__button-enter">
+                <a href="./login.html" class="header__button-enter">
+                    <button class="primary">
                         Войти
                     </button>
                 </a>
+                <button class="logout error" >
+                    Выйти
+                </button>
             </div>
             <div class="header__menu">
                 <button id="menu-bar">
@@ -32,20 +35,23 @@
                 </button>
                 <div id="header__menu__list" class="disable">
                     <a href="./index.html">Главная</a>
-                    <a href="./create-event.html">Создать событие</a>
+                    <a href="./main.html">Создать событие</a>
                     <a href="./about.html">О нас</a>
-                    <a href="./login.html">
+                    <a href="./login.html" class="header__button-enter">
                         <button class="primary">
                             Войти
                         </button>
                     </a>
+                    <button class="logout error" >
+                        Выйти
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
     <main>
         <form id="register">
-          <label for="name" class="body1">Введите почту</label>
+          <label for="name" class="body1">Введите имя</label>
           <input id="name" autocomplete="off" name="name" placeholder="Name" type="name" >
           <label for="email" class="body1">Введите почту</label>
           <input id="email" autocomplete="off" name="email" placeholder="Email" type="email" >

@@ -1,12 +1,13 @@
 class Store {
-  constructor (users) {
+  constructor (users, events) {
     this.users = users
+    this.events = events
   }
 
   static initStore() {
     const users = JSON.parse(localStorage.getItem('users'));
-    if (users) return new Store(users);
-    else return new Store([]);
+    const events = JSON.parse(localStorage.getItem('events'));
+    return new Store(users || [], events || []);
   }
 
   setUser(user) {
@@ -59,7 +60,6 @@ export function login({password, email}) {
   if (newUser) {
     if (newUser.password == password) {
       user.updateUser(email);
-      console.log('here');
       window.location.assign('http://eventhub/main.html');
       return ;
     } else {
@@ -80,4 +80,11 @@ export function register({name, email, password }) {
     window.location.assign('http://eventhub/main.html')
     return;
   }
+}
+
+export function logout(e) {
+  e.preventDefault();
+  console.log('here')
+  user.deleteUser();
+  window.location.reload();
 }

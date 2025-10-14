@@ -1,4 +1,4 @@
-import { user } from "./api";
+import { logout, user } from "./api.js";
 
 // мобильное меню
 
@@ -12,13 +12,16 @@ function handleChangeVisible() {
 
 menuButton.addEventListener('click', handleChangeVisible);
 
-// вход в аккаунт пользователя
-
-console.log(user);
+// вход в аккаунт и выход из аккаунта пользователя
 
 if (user.email) {
-  const links = document.getElementsByClassName('my-events');
+  const links = document.getElementsByClassName('logout');
   Array.from(links).forEach(link => {
     link.classList.add('active');
+    link.addEventListener('click', logout)
+  });
+  const buttons = document.getElementsByClassName('header__button-enter');
+  Array.from(buttons).forEach(button => {
+    button.classList.add('hide');
   });
 }

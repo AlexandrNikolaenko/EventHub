@@ -126,6 +126,11 @@ button.secondary {
   color: var(--primary-contrast-text);
 }
 
+button.error {
+  background-color: var(--error-light);
+  color: var(--primary-contrast-text);
+}
+
 .wrapper {
   max-width: 1240px;
   margin: 0 auto;
