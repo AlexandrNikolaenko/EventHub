@@ -3,14 +3,7 @@ main {
   flex-direction: column;
   gap: 157px;
   align-items: center;
-}
-
-section:first-child {
-  padding-top: 203px;
-}
-
-section:last-child {
-  padding-bottom: 157px;
+  padding: 200px 0 150px 0;
 }
 
 section {
