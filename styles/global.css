@@ -127,8 +127,9 @@ button.secondary {
 }
 
 button.error {
-  background-color: var(--error-light);
-  color: var(--primary-contrast-text);
+  background-color: white;
+  border: var(--error-light) 1px solid;
+  color: var(--error-light);
 }
 
 .wrapper {

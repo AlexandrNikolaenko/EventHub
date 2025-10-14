@@ -1,3 +1,13 @@
+// event: {
+//   user: string
+//   id: number
+//   title: string
+//   date: string
+//   author: string
+//   desc: string
+//   place: number[]
+// }
+
 class Store {
   constructor (users, events) {
     this.users = users
@@ -17,6 +27,16 @@ class Store {
 
   getUserByEmail(email) {
     return this.users.find(user => user.email == email);
+  }
+
+  setEvents(event) {
+    event.user = user.email
+    this.events.push(event);
+    localStorage.setItem('events', JSON.stringify(this.events));
+  }
+
+  getEvents() {
+    return this.events.filter(event => event.user == user.email);
   }
 }
 

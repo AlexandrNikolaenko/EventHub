@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="./styles/global.css">
-    <link rel="stylesheet" href="./styles/create-event.css">
+    <link rel="stylesheet" href="./styles/main.css">
     <script type="module" src="./scripts/api.js"></script>
 </head>
 <body>
@@ -50,9 +50,44 @@
         </nav>
     </header>
     <main>
-      <section>
-
+      <section class="wrapper event-actions">
+        <div class="append-event">
+          <button class="create-event">
+            Создать событие
+          </button>
+          <button class="gen-event secondary">
+            Сгенерировать событие
+          </button>
+        </div>
+        <form class="search-events">
+          <input class="search__input" name="search" placeholder="Найти мероприятие по названию">
+          </input>
+          <button type="submit" class="search__button">
+            <img src="./public/search.svg"></img>
+          </button>
+        </form>
       </section>
+      <section class="events wrapper">  
+        <div id='events__empty' class="events__empty">
+          <span class="h6">
+            Ничего не нашлось :(
+          </span>
+          <p class="body1">У вас сейчас нет активных мероприятий, но вы можете создать новое</p>
+        </div>
+        <ul class="hide events-list">
+
+        </ul>
+      </section>
+      <div class="create-event-modal">
+        <form class="modal">
+
+        </form>
+      </div>
+      <div class="generate-event-modal">
+        <form class="modal">
+
+        </form>
+      </div>
     </main>
     <footer>
         <div class="wrapper">
@@ -61,6 +96,38 @@
             <p>Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
+    <template id="event-card-template">
+      <div class="event-card">
+        <div class="card-media">
+  
+        </div>
+        <div class="card-header h5">
+  
+        </div>
+        <div class="card-content">
+          <span class="event-author body1">
+            
+          </span>
+          <p class="event-description body1">
+            
+          </p>
+          <div class="event-coordinate-info">
+            <span class="event-date body1">
+    
+            </span>
+            <span class="event-place body1">
+  
+            </span>
+          </div>
+        </div>
+        <div class="card-action">
+          <a class="event-button">
+            <button class="primary">Посмотреть</button>
+          </a>
+        </div>
+      </div>
+    </template>
     <script type="module" src="./scripts/header.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

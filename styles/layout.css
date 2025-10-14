@@ -28,9 +28,7 @@ header .header__button-enter {
   display: none;
 }
 
-.logout {
-  filter: var(--shadow-light);
-}
+
 
 .header__menu {
   display: none;
