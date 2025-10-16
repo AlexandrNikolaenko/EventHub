@@ -59,7 +59,7 @@
             Сгенерировать событие
           </button>
         </div>
-        <form class="search-events">
+        <form id="search-form" class="search-events">
           <input class="search__input" name="search" placeholder="Найти мероприятие по названию">
           </input>
           <button type="submit" class="search__button">
@@ -74,21 +74,57 @@
           </span>
           <p class="body1">У вас сейчас нет активных мероприятий, но вы можете создать новое</p>
         </div>
-        <ul class="hide events-list">
+        <ul id="events-list" class="hide events-list">
 
         </ul>
       </section>
-      <div class="create-event-modal">
-        <form class="modal">
-
-        </form>
-      </div>
-      <div class="generate-event-modal">
-        <form class="modal">
-
-        </form>
-      </div>
     </main>
+    <div id="create-event-modal">
+      <form id="create-event-form" class="modal">
+        <label for="title" class="body1">Введите название *</label>
+        <input id="title" autocomplete="off" name="title" placeholder="Title" >
+        <span class="body1" id="title-error">Это поле обязательное</span>
+        <label for="desc" class="body1">Введите описание *</label>
+        <input id="desc" autocomplete="off" name="desc" placeholder="Description" >
+        <span class="body1" id="desc-error">Это поле обязательное</span>
+        <label for="date" class="body1">Введите дату проведения *</label>
+        <input id="date" autocomplete="off" name="date" placeholder="Date" type="date">
+        <span class="body1" id="date-error">Это поле обязательное</span>
+        <label for="place" class="body1">Укажите место проведения проведения *</label>
+        <input id="place" autocomplete="off" name="place" placeholder="Coordinates">
+        <span class="body1" id="place-error">Это поле обязательное</span>
+        <label for="place" class="body1">Добавьте участников *</label>
+        <div class="users-input">
+          <input id="users" autocomplete="off" name="users" placeholder="User">
+          <ul id="users-list" class="hide">
+            
+          </ul>
+          <ul id="users-active-list">
+            
+          </ul>
+        </div>
+        <button class="primary" type="submit">
+          Создать
+        </button>
+        <button class="primary outline" id="close-cretor-modal">
+          Отменить
+        </button>
+      </form>
+    </div>
+    <div id="generate-event-modal">
+      <form id="generate-event-form" class="modal">
+        <label for="desc" class="body1">Введите описание</label>
+        <input id="desc" autocomplete="off" name="desc" placeholder="Description" >
+        <label for="date" class="body1">Введите дату проведения</label>
+        <input id="date" autocomplete="off" name="date" placeholder="Date" type="date">
+        <button class="primary" type="submit">
+          Сгенерировать
+        </button>
+        <button class="primary outline" id="close-generator-modal">
+          Отменить
+        </button>
+      </form>
+    </div>
     <footer>
         <div class="wrapper">
             <span class="h6 logo">Together</span>
@@ -124,8 +160,28 @@
           <a class="event-button">
             <button class="primary">Посмотреть</button>
           </a>
+          <button class="remove-button error">
+            Удалить
+          </button>
         </div>
       </div>
+    </template>
+    <template id="active-user-template">
+      <li class="active-user">
+        <span class="body1">
+
+        </span>
+        <button class="close-button">
+          <img src="./public/x.svg">
+        </button>
+      </li>
+    </template>
+    <template id="user-template">
+      <li class="user body1">
+        <button class="user-button">
+          
+        </button>
+      </li>
     </template>
     <script type="module" src="./scripts/header.js"></script>
     <script type="module" src="./scripts/main.js"></script>

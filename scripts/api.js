@@ -1,11 +1,10 @@
 // event: {
-//   user: string
 //   id: number
 //   title: string
 //   date: string
 //   author: string
 //   desc: string
-//   place: number[]
+//   place: string
 // }
 
 class Store {
@@ -30,13 +29,18 @@ class Store {
   }
 
   setEvents(event) {
-    event.user = user.email
+    event.author = user.email
     this.events.push(event);
     localStorage.setItem('events', JSON.stringify(this.events));
   }
 
   getEvents() {
     return this.events.filter(event => event.user == user.email);
+  }
+
+  deleteEvents(id) {
+    this.events = this.events.filter(event => event.id != id)
+    localStorage.setItem('evetns', JSON.stringify(this.events))
   }
 }
 
@@ -60,6 +64,13 @@ class User {
     window.localStorage.removeItem('activeUser');
   }
 
+  getUser() {
+    return {
+      name: this.name,
+      email: this.email,
+    }
+  }
+
   static initUser() {
     const newUser = new User();
     if (window.localStorage.getItem('activeUser')) {
@@ -75,7 +86,6 @@ export const user = User.initUser();
 
 
 export function login({password, email}) {
-  console.log(email);
   const newUser = store.users.find(elem => elem.email == email);
   if (newUser) {
     if (newUser.password == password) {

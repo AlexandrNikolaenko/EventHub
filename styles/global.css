@@ -58,6 +58,12 @@ button.primary {
   color: var(--primary-contrast-text);
 }
 
+button.primary.outline {
+  border: var(--primary) 1px solid;
+  background-color: var(--primary-contrast-text);
+  color: var(--primary);
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
   color: var(--primary);
 }
@@ -135,6 +141,7 @@ button.error {
 .wrapper {
   max-width: 1240px;
   margin: 0 auto;
+  width: 100%;
 }
 
 main {
@@ -146,5 +153,6 @@ main {
     margin: 0;
     padding: 0 100px;
     max-width: 100%;
+    width: auto;
   }
 }
