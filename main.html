@@ -151,7 +151,7 @@
         <div class="wrapper">
             <span class="h6 logo">Together</span>
             <p>© 2025 EventHub. Все права защищены.</p>
-            <p>Адрес: г. Москва, ул. Примерная, 1</p>
+            <p id="load-time">Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
     <template id="event-card-template">
@@ -208,6 +208,17 @@
         </button>
       </li>
     </template>
+    <script>
+      (function() {
+        window.addEventListener('load', function() {
+          const loadTime = performance.now();
+
+          const footer = document.getElementById('load-time');
+
+          footer.textContent = `⏱ Время загрузки страницы: ${loadTime.toFixed(2)} мс`;
+        });
+      })();
+    </script>
     <script type="module" src="./scripts/header.js"></script>
     <script type="module" src="./scripts/main.js"></script>
 </body>
