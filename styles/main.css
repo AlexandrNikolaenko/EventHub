@@ -154,6 +154,31 @@ form.modal {
   gap: 10px;
 }
 
+.event-card {
+  width: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  filter: var(--shadow-light);
+}
+
+.event-card .card-media {
+  width: 100%;
+  aspect-ratio: 393/240;
+  background: url("../public/theatre.jpg");
+}
+
+.event-card .card-header, .event-card .card-content {
+  padding: 16px;
+}
+
+.event-card .card-action {
+  padding: 8px;
+}
+
 .hide {
   display: none !important;
 }

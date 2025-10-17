@@ -20,8 +20,14 @@ class Store {
   }
 
   setUser(user) {
+    user.events = [];
     this.users.push(user);
     localStorage.setItem('users', JSON.stringify(this.users));
+  }
+
+  updateStore() {
+    localStorage.setItem('users', JSON.stringify(this.users));
+    localStorage.setItem('events', JSON.stringify(this.events));
   }
 
   getUserByEmail(email) {
@@ -29,18 +35,28 @@ class Store {
   }
 
   setEvents(event) {
-    event.author = user.email
+    if (this.events.length != 0) {
+      event.id = this.events[this.events.length - 1].id + 1;
+    } else event.id = 0
+    if (!event.users.includes(user.email)) event.users.push(user.email);
+    event.author = user.email;
+    this.users = this.users.map(elem =>{
+      if (event.users.includes(elem.email)) elem.events.push(event.id);
+      return elem;
+    });
+    console.log(this.events, this.users);
     this.events.push(event);
-    localStorage.setItem('events', JSON.stringify(this.events));
+    this.updateStore();
   }
 
   getEvents() {
-    return this.events.filter(event => event.user == user.email);
+    return this.events.filter(event => event.author == user.email || event.users.includes(user.email));
   }
 
   deleteEvents(id) {
-    this.events = this.events.filter(event => event.id != id)
-    localStorage.setItem('evetns', JSON.stringify(this.events))
+    this.events = this.events.filter(event => event.id != id);
+    
+    this.updateStore();
   }
 }
 

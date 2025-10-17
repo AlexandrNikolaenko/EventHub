@@ -116,6 +116,10 @@ function handleCreateEvent(e) {
   if (validateFormCreate(event)) {
     event.users = users;
     store.setEvents(event);
+    users = [];
+    e.target.reset();
+    document.getElementById("users-active-list").innerHTML = '';
+    document.getElementById("users-list").classList.add('hide');
     document.getElementById('create-event-modal').classList.remove('active');
     loadEvents();
   }
@@ -131,10 +135,8 @@ function handleAddUser(e, email) {
   const activeUsersList = document.getElementById("users-active-list");
 
   const activeUserTemplate = document.getElementById('active-user-template').content;
-  console.log(activeUserTemplate.querySelector('li'));
 
   const activeUser = activeUserTemplate.querySelector('li').cloneNode(true);
-  console.log(activeUser);
   activeUser.querySelector('span').textContent = email;
   activeUser.querySelector('button').addEventListener('click', (e) => {
     e.preventDefault();
@@ -145,6 +147,7 @@ function handleAddUser(e, email) {
     activeUsersList.appendChild(activeUser);
     users.push(email);
   }
+  console.log(users);
 }
 
 function setUsers(search) {
