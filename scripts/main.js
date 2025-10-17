@@ -13,7 +13,7 @@ function loadEvents(search) {
   let events = store.getEvents();
 
   if (search) {
-    events = events.filter(event => event.title.include(search))
+    events = events.filter(event => event.title.includes(search))
   }
 
   const list = document.getElementById('events-list')
@@ -35,6 +35,7 @@ function loadEvents(search) {
       const link = eventCard.querySelector('.event-button');
       link.setAttribute('href', `./event.html?id=${event.id}`);
       eventCard.querySelector('.remove-button').addEventListener('click', (e) => handleRemoveEvent(e, event.id));
+      eventCard.querySelector('.edit-event-button').addEventListener('click', (e) => handleOpenEditModal(e, event.id))
       list.appendChild(eventCard);
     })
   }
@@ -67,7 +68,7 @@ function handleCloseCreatorModal(e) {
 document.getElementById('close-cretor-modal').addEventListener('click', handleCloseCreatorModal);
 document.querySelector('.create-event').addEventListener('click', handleOpenCreatorModal)
 
-// открытие формы генерации события
+// открытие и закрытие формы генерации события
 
 function handleOpenGeneratorModal(e) {
   e.preventDefault();
@@ -81,6 +82,28 @@ function handleCloseGeneratorModal(e) {
 
 document.getElementById('close-generator-modal').addEventListener('click', handleCloseGeneratorModal);
 document.querySelector('.gen-event').addEventListener('click', handleOpenGeneratorModal)
+
+// открытие и закрытие формы редактирования события
+
+function handleOpenEditModal(e, id) {
+  e.preventDefault();
+  const form = document.getElementById('edit-event-form');
+  const event = store.getEventById(id);
+  form.dataset.id = id;
+  console.log(e.target);
+  form.querySelector('#edit-title').value = event.title;
+  form.querySelector('#edit-desc').value = event.desc;
+  form.querySelector('#edit-date').value = event.date;
+  form.querySelector('#edit-place').value = event.place;
+  document.getElementById('edit-event-modal').classList.add('active');
+}
+
+function handleCloseEditModal(e) { 
+  e.preventDefault();
+  document.getElementById('edit-event-modal').classList.remove('active');
+}
+
+document.getElementById('close-edit-modal').addEventListener('click', handleCloseEditModal)
 
 // обработка формы создания события
 
@@ -179,3 +202,42 @@ function handleChangeUsersInput(e) {
 }
 
 document.getElementById('users').addEventListener('input', handleChangeUsersInput);
+
+// обработка формы редактирования события
+
+function setEditError(field) {
+  document.getElementById('edit-' + field + '-error').classList.add('active');
+}
+
+function clearEditErrors(keys) {
+  keys.forEach(key => {
+    document.getElementById('edit-' + key + '-error').classList.remove('active');
+  })
+}
+
+function validateFormEdit(event) {
+  const keys = Object.keys(event).filter(key => key != 'users');
+  let errors = []
+  keys.forEach(key => {
+    if (event[key] == '') {
+      setEditError(key);
+      errors.push(key);
+    }
+  });
+  clearEditErrors(keys.filter(key => !errors.includes(key)));
+  if (errors.length == 0) return true;
+  else return false;
+}
+
+function handleEditEvent(e) {
+  e.preventDefault();
+  const event = Object.fromEntries(new FormData(e.target));
+  if (validateFormEdit(event)) {
+    store.editEvent(e.target.dataset.id, event);
+    e.target.reset();
+    document.getElementById('edit-event-modal').classList.remove('active');
+    loadEvents();
+  }
+}
+
+document.getElementById('edit-event-form').addEventListener('submit', handleEditEvent);

@@ -34,6 +34,10 @@ class Store {
     return this.users.find(user => user.email == email);
   }
 
+  getEventById(id) {
+    return this.events.find(event => event.id == id)
+  }
+
   setEvents(event) {
     if (this.events.length != 0) {
       event.id = this.events[this.events.length - 1].id + 1;
@@ -46,6 +50,16 @@ class Store {
     });
     console.log(this.events, this.users);
     this.events.push(event);
+    this.updateStore();
+  }
+
+  editEvent(id, event) {
+    console.log(event);
+    const index = this.events.findIndex(elem => elem.id == id);
+    this.events[index].title = event.title;
+    this.events[index].desc = event.desc;
+    this.events[index].date = event.date;
+    this.events[index].place = event.place;
     this.updateStore();
   }
 

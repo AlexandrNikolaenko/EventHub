@@ -46,7 +46,7 @@ button.gen-event {
   filter: var(--shadow-light);
 }
 
-#create-event-modal, #generate-event-modal {
+#create-event-modal, #generate-event-modal, #edit-event-modal {
   z-index: 101;
   /* padding: 50px 0 100px 0; */
   display: none;
@@ -60,7 +60,7 @@ button.gen-event {
   background-color: rgba(96, 125, 139, .25);
 }
 
-#create-event-modal.active, #generate-event-modal.active {
+#create-event-modal.active, #generate-event-modal.active, #edit-event-modal.active {
   display: flex;
 }
 
@@ -135,6 +135,19 @@ form.modal {
   background-color: white;
 }
 
+.edit-event-button {
+  height: 43.6px;
+  padding: 0;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 10px;
+  border: var(--primary) 1px solid;
+  background-color: white;
+}
+
 .search-events button img {
   width: 20px;
   aspect-ratio: 1/1;
@@ -177,6 +190,9 @@ form.modal {
 
 .event-card .card-action {
   padding: 8px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
 }
 
 .hide {
