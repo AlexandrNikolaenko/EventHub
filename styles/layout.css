@@ -20,6 +20,23 @@ header .wrapper {
   align-items: center;
 }
 
+.nav_link {
+  padding: 8px 22px;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: all .15s;
+  line-height: 26px;
+}
+
+.nav_link:hover, .nav_link:focus {
+  background-color: rgba(96, 125, 139, .25);
+}
+
+.nav_link.active, .nav_link.active:active, .nav_link:active, .nav_link.active:hover, .nav_link.active:focus {
+  background-color: var(--primary);
+  color: var(--primary-contrast-text);
+}
+
 header .header__button-enter {
   filter: var(--shadow-light);
 }
