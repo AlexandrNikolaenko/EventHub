@@ -27,7 +27,7 @@
 }
 
 * {
-  transition: .3 all;
+  transition: all .15s;
 }
 
 body {
@@ -51,26 +51,6 @@ button {
   font-weight: 500;
   border: none;
   cursor: pointer;
-}
-
-button.primary {
-  background-color: var(--primary);
-  color: var(--primary-contrast-text);
-}
-
-button.primary.outline {
-  border: var(--primary) 1px solid;
-  background-color: var(--primary-contrast-text);
-  color: var(--primary);
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-}
-
-button.primary.outline img {
-  aspect-ratio: 1/1;
-  width: 24px;
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -146,6 +126,36 @@ button.error {
   border: var(--error-light) 1px solid;
   color: var(--error-light);
 }
+
+button.primary.outline {
+  border: var(--primary) 1px solid;
+  background-color: white;
+  color: var(--primary);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+button.primary.outline img {
+  aspect-ratio: 1/1;
+  width: 24px;
+}
+
+button.primary:active, button.primary:hover, button.primary:focus {
+  background-color: var(--primary-dark);
+}
+
+button.primary.outline:active, button.primary.outline:hover, button.primary.outline:focus {
+  background-color: var(--primary-contrast-text);
+}
+
+button.error:hover, button.error:focus, button.error:active {
+  background-color: var(--primary-contrast-text);
+  border: var(--error) 1px solid;
+  color: var(--error);
+}
+
 
 .wrapper {
   max-width: 1240px;
