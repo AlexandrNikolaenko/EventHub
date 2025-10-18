@@ -65,6 +65,7 @@ button.primary.outline {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 button.primary.outline img {
