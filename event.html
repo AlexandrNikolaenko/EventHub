@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="мероприятия, афиша, бронирование, события">
+    <meta name="description" content="Система управления событиями: афиша, бронирование и организация мероприятий">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub — афиша мероприятий</title>
+    <link rel="stylesheet" href="./styles/global.css">
+    <link rel="stylesheet" href="./styles/event.css">
+    <script type="module" src="./scripts/api.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="wrapper">
+            <a class="h6 logo" href="./index.html">
+                Together
+            </a>
+            <div class="header__nav-list">
+                <a href="./index.html">Главная</a>
+                <a href="./main.html">Создать событие</a>
+                <a href="./about.html">О нас</a>
+                <a href="./login.html" class="header__button-enter">
+                    <button class="primary">
+                        Войти
+                    </button>
+                </a>
+                <button class="logout error" >
+                    Выйти
+                </button>
+            </div>
+            <div class="header__menu">
+                <button id="menu-bar">
+                    <img src="./public/menu.svg">
+                </button>
+                <div id="header__menu__list" class="disable">
+                    <a href="./index.html">Главная</a>
+                    <a href="./main.html">Создать событие</a>
+                    <a href="./about.html">О нас</a>
+                    <a href="./login.html" class="header__button-enter">
+                        <button class="primary">
+                            Войти
+                        </button>
+                    </a>
+                    <button class="logout error" >
+                        Выйти
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+      <section class="button-line wrapper">
+        <a href="./main.html">
+          <button class="primary outline"><img src="./public/arrow-left.svg">Назад</button>
+        </a>
+        <button id="edit-event-button" class="primary outline">Редактировать<img src="./public/edit.svg"></button>
+      </section>
+      <div class="img-container wrapper">
+        <img src="./public/theatre.jpg">
+      </div>
+      <section class="info-section wrapper">
+        <div class="main-info">
+          <h2 class="title">
+  
+          </h2>
+          <p class="desc">
+            
+          </p>
+        </div>
+        <div class="additional-info">
+          <div class="body1">
+            Организатор:
+            <span class="author"></span>
+          </div>
+          <div class="body1">
+            Место встречи:
+            <span class="place"></span>
+          </div>
+          <div class="body1">
+            Дата:
+            <span class="date"></span>
+          </div>
+          Участники:
+          <ul id="users-list">
+
+          </ul>
+        </div>
+      </section>
+    </main>
+    <div id="edit-event-modal">
+      <form id="edit-event-form" class="modal">
+        <label for="title" class="body1">Введите название *</label>
+        <input id="edit-title" autocomplete="off" name="title" placeholder="Title" >
+        <span class="body1" id="edit-title-error">Это поле обязательное</span>
+        <label for="desc" class="body1">Введите описание *</label>
+        <input id="edit-desc" autocomplete="off" name="desc" placeholder="Description" >
+        <span class="body1" id="edit-desc-error">Это поле обязательное</span>
+        <label for="date" class="body1">Введите дату проведения *</label>
+        <input id="edit-date" autocomplete="off" name="date" placeholder="Date" type="date">
+        <span class="body1" id="edit-date-error">Это поле обязательное</span>
+        <label for="place" class="body1">Укажите место проведения проведения *</label>
+        <input id="edit-place" autocomplete="off" name="place" placeholder="Coordinates">
+        <span class="body1" id="edit-place-error">Это поле обязательное</span>
+        <button class="primary" type="submit">
+          Сохранить
+        </button>
+        <button class="primary outline" id="close-edit-modal">
+          Отменить
+        </button>
+      </form>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <span class="h6 logo">Together</span>
+            <p>© 2025 EventHub. Все права защищены.</p>
+            <p id="load-time">Адрес: г. Москва, ул. Примерная, 1</p>
+        </div>
+    </footer>
+    <template id="user-template">
+      <li class="user"></li>
+    </template>
+    <script>
+      (function() {
+        window.addEventListener('load', function() {
+          const loadTime = performance.now();
+
+          const footer = document.getElementById('load-time');
+
+          footer.textContent = `⏱ Время загрузки страницы: ${loadTime.toFixed(2)} мс`;
+        });
+      })();
+    </script>
+    <script type="module" src="./scripts/header.js"></script>
+    <script type="module", src="./scripts/event.js"></script>
+</body>
+</html>
