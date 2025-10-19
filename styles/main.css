@@ -148,6 +148,10 @@ form.modal {
   background-color: white;
 }
 
+.edit-event-button:hover, .edit-event-button:active, .edit-event-button:focus, button.search__button:hover, button.search__button:active, button.search__button:focus {
+  background-color: var(--primary-contrast-text);
+}
+
 .search-events button img {
   width: 20px;
   aspect-ratio: 1/1;

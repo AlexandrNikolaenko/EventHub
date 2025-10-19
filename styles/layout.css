@@ -16,7 +16,7 @@ header .wrapper {
 
 .header__nav-list {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
 }
 
