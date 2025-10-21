@@ -76,6 +76,7 @@ section:first-child {
   gap: 30px;
   flex-wrap: nowrap;
   width: 100%;
+  overflow: visible;
 }
 
 .event-card {
