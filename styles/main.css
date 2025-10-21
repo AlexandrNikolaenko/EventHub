@@ -283,3 +283,45 @@ form.modal {
   width: 16px;
   aspect-ratio: 1/1;
 }
+
+@media screen and (max-width: 1440px) {
+  .events ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .users-input {
+    flex-direction: column-reverse;
+  }
+
+  .events ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .append-event {
+    flex-direction: column;
+  }
+
+  button.gen-event {
+    padding: 10px 0;
+  }
+
+  form.modal {
+    margin: 50px 40px 100px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  form.modal {
+    margin: 50px 20px 100px;
+  }
+
+  .event-card .card-action {
+    flex-wrap: wrap;
+  }
+}
