@@ -169,9 +169,80 @@ main {
 
 @media screen and (max-width: 1440px) {
   .wrapper {
-    margin: 0;
-    padding: 0 100px;
+    margin: 0 100px;
     max-width: 100%;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    margin: 0 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1, .h1 {
+    font-size: 72px;
+  }
+
+  h2, .h2 {
+    font-size: 48px;
+  }
+
+  h3, .h3 {
+    font-size: 36px;
+  }
+
+  h4, .h4 {
+    font-size: 28px;
+  }
+
+  h5, .h5 {
+    font-size: 22px;
+  }
+
+  h6, .h6 {
+    font-size: 20px;
+  }
+
+  .body1 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  h1, .h1 {
+    font-size: 64px;
+  }
+
+  h2, .h2 {
+    font-size: 40px;
+  }
+
+  h3, .h3 {
+    font-size: 30px;
+  }
+
+  h4, .h4 {
+    font-size: 24px;
+  }
+
+  h5, .h5 {
+    font-size: 20px;
+  }
+
+  h6, .h6 {
+    font-size: 18px;
+  }
+
+  .body1 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    margin: 0 20px;
   }
 }

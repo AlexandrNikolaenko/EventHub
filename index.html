@@ -29,28 +29,10 @@
                     Выйти
                 </button>
             </div>
-            <div class="header__menu">
-                <button id="menu-bar">
-                    <img src="./public/menu.svg">
-                </button>
-                <div id="header__menu__list" class="disable">
-                    <a class="nav_link" href="./index.html">Главная</a>
-                    <a class="nav_link" href="./main.html">Создать событие</a>
-                    <a class="nav_link" href="./about.html">О нас</a>
-                    <a href="./login.html" class="header__button-enter">
-                        <button class="secondary">
-                            Войти
-                        </button>
-                    </a>
-                    <button class="logout error" >
-                        Выйти
-                    </button>
-                </div>
-            </div>
         </nav>
     </header>
     <main>
-        <section id="preview">
+        <section id="preview" class="wrapper">
             <div class="block">
                 <h1>
                     <span>Организуй</span> встречи с друзьями <span>легко</span>
@@ -66,7 +48,7 @@
                 </a>
             </div>
         </section>
-        <section id="steps">
+        <section id="steps" class="wrapper">
             <h2>
                 <span>4 шага</span> к идеальной встрече
             </h2>
@@ -117,7 +99,7 @@
                 </div>
             </div>
         </section>
-        <section id="events">
+        <section id="events" class="wrapper">
             <div class="head">
                 <h2>
                     Не хочешь <span>придумывать</span> сам?
@@ -126,7 +108,7 @@
                     Выбирай из готовых событий в городе — концерты, выставки, вечеринки и многое другое. Добавляй в список и приглашай друзей в один клик.
                 </h5>
             </div>
-            <ul class="wrapper">
+            <ul>
                 <li class="event-card">
                     <div class="card-media"></div>
                     <div class="card-header h5">
@@ -170,11 +152,11 @@
                 </button>
             </div>
         </section>
-        <section id="why">
+        <section id="why" class="wrapper">
             <h2>
                 Почему это <span>удобно</span>?
             </h2>
-            <div class="block wrapper">
+            <div class="block">
                 <div class="why-card">
                     <img src="./public/rocket.svg">
                     <h5>
@@ -248,7 +230,7 @@
                 </div>
             </div>
         </section>
-        <section id="try">
+        <section id="try" class="wrapper">
             <h2>
                 <span>Попробуй</span> прямо сейчас!
             </h2>
@@ -260,6 +242,13 @@
             </button>
         </section>
     </main>
+    <nav class="nav_bar">
+        <div class="wrapper">
+            <a class="nav_bar__link" href="./index.html"><img src="./public/home.svg"></a>
+            <a class="nav_bar__link" href="./main.html"><img src="./public/events.svg"></a>
+            <a class="nav_bar__link" href="./about.html"><img src="./public/about.svg"></a>
+        </div>
+    </nav>
     <footer>
         <div class="wrapper">
             <span class="h6 logo">Together</span>

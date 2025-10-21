@@ -1,3 +1,7 @@
+h1, h2 {
+  text-align: center;
+}
+
 section {
   display: flex;
   flex-direction: column;
@@ -71,6 +75,8 @@ section:first-child {
   display: flex;
   gap: 30px;
   flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: scroll;
 }
 
 .event-card {
@@ -179,3 +185,63 @@ h1 span, h2 span, h4 span {
 h1, h6 {
   text-align: center;
 } 
+
+.event-card {
+  min-width: 320px;
+}
+
+@media screen and (max-width: 1024px) {
+  #steps .block {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  #why .block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #try h5 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #steps .block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #who .block {
+    gap: 20px;
+  }
+
+  .who-card {
+    flex-direction: column;
+    padding: 0 0 30px 0;
+    gap: 20px;
+  }
+
+  .who-card h4 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .who-card.reverse {
+    flex-direction: column-reverse;
+    padding: 30px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #events ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+}
