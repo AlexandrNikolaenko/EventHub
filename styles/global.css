@@ -150,6 +150,10 @@ button.primary.outline:active, button.primary.outline:hover, button.primary.outl
   background-color: var(--primary-contrast-text);
 }
 
+button.secondary:active, button.secondary:hover, button.secondary:focus {
+  background-color: var(--secondary-dark);
+}
+
 button.error:hover, button.error:focus, button.error:active {
   background-color: var(--primary-contrast-text);
   border: var(--error) 1px solid;
