@@ -56,8 +56,24 @@ nav.nav_bar {
 .nav_bar .wrapper {
   display: none;
   justify-content: space-around;
-  padding-top: 10px;
-  padding-bottom: 10px;
+}
+
+.nav_bar__link {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 100px;
+}
+
+.nav_bar__link:active, .nav_bar__link:hover, .nav_bar__link:focus {
+  background-color: var(--primary-light);
+}
+
+.nav_bar__link.active {
+  background-color: var(--secondary);
+}
+
+.nav_bar__link.active svg path {
+  stroke: var(--primary-contrast-text);
 }
 
 @media screen and (max-width: 768px) {
