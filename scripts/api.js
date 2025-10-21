@@ -123,17 +123,17 @@ export function login({password, email}) {
       window.location.assign('http://eventhub/main.html');
       return ;
     } else {
-      return new Error("{type: 'password', message: 'Неверный пароль'}")
+      throw new Error(JSON.stringify({ type: "password", message: "Неверный пароль" }))
     }
   } else {
-    return new Error("{type: email, message: 'Пользователя с такой почтой не существует'}")
+    throw new Error(JSON.stringify({ type: "email", message: "Пользователя с такой почтой не существует" }))
   }
 }
 
 export function register({name, email, password }) {
   const checkUser = store.users.find(user => user.email == email);
   if (checkUser) {
-    return new Error("{type: email, message: 'Пользователь с такой почтой уже существует'}")
+    throw new Error(JSON.stringify({type: 'email', message: 'Пользователь с такой почтой уже существует'}))
   } else {
     store.setUser({name, email, password });
     user.updateUser(email)

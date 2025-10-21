@@ -39,7 +39,7 @@ function handleSubmit(e) {
         const error = JSON.parse(err.message);
         const message = document.getElementById(error.type + '-error');
         message.classList.add('active');
-        message.textContent(error.message);
+        message.textContent = error.message;
       } catch (e) {
         console.log(e);
       }
