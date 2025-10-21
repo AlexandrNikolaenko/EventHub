@@ -191,6 +191,12 @@ h1, h6 {
   min-width: 320px;
 }
 
+@media screen and (max-width: 1440px) {
+  #events ul {
+    overflow-x: scroll;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #steps .block {
     width: 100%;
