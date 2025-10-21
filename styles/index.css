@@ -76,7 +76,6 @@ section:first-child {
   gap: 30px;
   flex-wrap: nowrap;
   width: 100%;
-  overflow-x: scroll;
 }
 
 .event-card {
@@ -189,6 +188,12 @@ h1, h6 {
 
 .event-card {
   min-width: 320px;
+}
+
+@media screen and (max-width: 1440px) {
+  #events ul {
+    overflow-x: scroll;
+  }
 }
 
 @media screen and (max-width: 1024px) {
