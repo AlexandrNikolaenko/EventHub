@@ -8,7 +8,6 @@
     <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/event.css">
-    <script type="module" src="./scripts/api.js"></script>
 </head>
 <body>
     <header>
@@ -140,21 +139,5 @@
             <p id="load-time">Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
-    <template id="user-template">
-      <li class="user"></li>
-    </template>
-    <script>
-      (function() {
-        window.addEventListener('load', function() {
-          const loadTime = performance.now();
-
-          const footer = document.getElementById('load-time');
-
-          footer.textContent = `⏱ Время загрузки страницы: ${loadTime.toFixed(2)} мс`;
-        });
-      })();
-    </script>
-    <script type="module" src="./scripts/header.js"></script>
-    <script type="module", src="./scripts/event.js"></script>
 </body>
 </html>

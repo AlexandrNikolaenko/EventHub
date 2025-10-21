@@ -58,7 +58,7 @@
         </div>
       </section>
       <section class="events wrapper">  
-        <div id='events__empty' class="events__empty">
+        <div id='events__empty' class="hide events__empty">
           <span class="h6">
             Ничего не нашлось :(
           </span>
@@ -67,7 +67,7 @@
         <ul id="events-list" class="hide events-list">
 
         </ul>
-        <table id="events-table" class="hide events-table">
+        <table id="events-table" class="events-table">
           <thead>
             <tr>
               <th scope="col">
@@ -91,6 +91,50 @@
             </tr>
           </thead>
           <tbody id="events-table-body">
+            <tr>
+              <td class="cell-id">0</td>
+              <td class="cell-title">asd</td>
+              <td class="cell-desc">asd</td>
+              <td class="cell-author">asd@asd.asd</td>
+              <td class="cell-date">2025-10-03</td>
+              <td class="cell-place">asd</td>
+            </tr>
+          
+            <tr>
+              <td class="cell-id">1</td>
+              <td class="cell-title">asdasdas</td>
+              <td class="cell-desc">asdasdas</td>
+              <td class="cell-author">asd@asd.asd</td>
+              <td class="cell-date">2025-10-09</td>
+              <td class="cell-place">asdasd</td>
+            </tr>
+          
+            <tr>
+              <td class="cell-id">2</td>
+              <td class="cell-title">asdas</td>
+              <td class="cell-desc">sdaasdasd</td>
+              <td class="cell-author">asd@asd.asd</td>
+              <td class="cell-date">2025-10-11</td>
+              <td class="cell-place">asdasdasd</td>
+            </tr>
+          
+            <tr>
+              <td class="cell-id">3</td>
+              <td class="cell-title">asdasd</td>
+              <td class="cell-desc">asd</td>
+              <td class="cell-author">asd@asd.asd</td>
+              <td class="cell-date">2025-10-11</td>
+              <td class="cell-place">asdasdasd</td>
+            </tr>
+          
+            <tr>
+              <td class="cell-id">4</td>
+              <td class="cell-title">asdasd</td>
+              <td class="cell-desc">asdasd</td>
+              <td class="cell-author">asd@asd.asd</td>
+              <td class="cell-date">2025-10-05</td>
+              <td class="cell-place">asdasd</td>
+            </tr>
           </tbody>
         </table>
       </section>
@@ -211,94 +255,5 @@
             <p id="load-time">Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
-    <template id="event-card-template">
-      <div class="event-card">
-        <div class="card-media">
-  
-        </div>
-        <div class="card-header h5">
-  
-        </div>
-        <div class="card-content">
-          <span class="event-author body1">
-            
-          </span>
-          <p class="event-description body1">
-            
-          </p>
-          <div class="event-coordinate-info">
-            <span class="event-date body1">
-    
-            </span>
-            <span class="event-place body1">
-  
-            </span>
-          </div>
-        </div>
-        <div class="card-action">
-          <a class="event-button">
-            <button class="primary">Посмотреть</button>
-          </a>
-          <button class="edit-event-button">
-            <img src="./public/edit.svg"></img>
-          </button>
-          <button class="remove-button error">
-            Удалить
-          </button>
-        </div>
-      </div>
-    </template>
-    <template id="event-table-row-template">
-      <tr>
-        <td class="cell-id">
-
-        </td>
-        <td class="cell-title">
-          
-        </td>
-        <td class="cell-desc">
-
-        </td>
-        <td class="cell-author">
-          
-        </td>
-        <td class="cell-date">
-
-        </td>
-        <td class="cell-place">
-          
-        </td>
-      </tr>
-    </template>
-    <template id="active-user-template">
-      <li class="active-user">
-        <span class="body1">
-
-        </span>
-        <button class="close-button">
-          <img src="./public/x.svg">
-        </button>
-      </li>
-    </template>
-    <template id="user-template">
-      <li class="user body1">
-        <button class="user-button">
-          
-        </button>
-      </li>
-    </template>
-    <script>
-      (function() {
-        window.addEventListener('load', function() {
-          const loadTime = performance.now();
-
-          const footer = document.getElementById('load-time');
-
-          footer.textContent = `⏱ Время загрузки страницы: ${loadTime.toFixed(2)} мс`;
-        });
-      })();
-    </script>
-    <script type="module" src="./scripts/header.js"></script>
-    <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
