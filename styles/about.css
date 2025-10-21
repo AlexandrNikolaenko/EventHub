@@ -66,12 +66,13 @@ ol {
   align-items: center;
   gap: 10px;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 ol li {
   padding: 20px;
   text-align: center;
-  width: 100%;
+  width: calc(100% - 40px);
   background-color: white;
   border-radius: 10px;
   filter: var(--shadow-light);
@@ -127,4 +128,47 @@ pre {
 
 code {
     font-family: "Courier New", monospace;
+}
+
+@media screen and (max-width: 1440px) {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  ul li {
+    width: auto;
+  }
+
+  ol li {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ol {
+    flex-direction: column;
+  }
+  
+  .step-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .code-section p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
