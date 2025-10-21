@@ -217,13 +217,7 @@ h1, h6 {
   }
 
   .why-card {
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    gap: 20px;
     padding: 30px;
-    align-items: center;
-    filter: var(--shadow-light);
   }
     
   #who .block {
