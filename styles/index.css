@@ -93,7 +93,8 @@ section:first-child {
 .event-card .card-media {
   width: 100%;
   aspect-ratio: 393/240;
-  background: url("../public/theatre.jpg");
+  background: url(../public/theatre.jpg) center;
+  background-size: cover;
 }
 
 .event-card .card-header, .event-card .card-content {
@@ -213,6 +214,10 @@ h1, h6 {
   #steps .block {
     display: flex;
     flex-direction: column;
+  }
+
+  .why-card {
+    padding: 30px;
   }
   
   #who .block {
