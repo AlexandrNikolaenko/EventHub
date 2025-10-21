@@ -12,12 +12,12 @@ main {
   gap: 20px;
 }
 
-.append-event {
+.append-event, .vision-info {
   display: flex;
   gap: 20px;
 }
 
-button.create-event {
+button.create-event, button.change-visible {
   padding: 10px 0;
   margin: 0;
   background-color: rgba(96, 125, 139, .15);
@@ -29,6 +29,10 @@ button.create-event {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+button.change-visible {
+  border: var(--primary-light) solid 2px;
 }
 
 button.create-event::after {
@@ -199,6 +203,62 @@ form.modal {
   flex-wrap: nowrap;
 }
 
+table {
+  width: 100%;
+  table-layout: fixed;
+  display: grid;
+  border-collapse: collapse;
+  grid-template-rows: auto 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  border: var(--primary-light) solid 1px;
+}
+
+thead, tbody {
+  display: contents;
+  min-width: 780px;
+}
+
+tr {
+  display: grid;
+  grid-template-columns: .3fr 1.3fr 2fr 1fr 1fr 1fr;
+}
+
+tr:nth-child(2n) {
+  background-color: white;
+}
+
+th {
+  padding: 10px;
+  border-bottom: 1px solid var(--primary-light);
+  border-right: 1px solid var(--primary-contrast-text);
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid var(--primary-light);
+  border-right: 1px solid var(--primary-light);
+}
+
+th:last-child, td:last-child {
+  border-right: none;
+}
+
+th {
+  background-color: var(--primary-light);
+  color: var(--primary-contrast-text);
+}
+
+@media screen and (max-width: 863px) {
+  table {
+    overflow-x: scroll;
+  }
+
+  tr {
+    width: 780px;
+  }
+}
+
 .hide {
   display: none !important;
 }
@@ -303,7 +363,7 @@ form.modal {
 }
 
 @media screen and (max-width: 640px) {
-  .append-event {
+  .append-event, .vision-info {
     flex-direction: column;
   }
 

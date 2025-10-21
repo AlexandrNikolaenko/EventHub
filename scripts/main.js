@@ -2,6 +2,18 @@ import { store, user } from "./api.js";
 
 if (!user.getUser().email) window.location.assign('./login.html');
 
+function handleChangeVision(param) {
+  if (param == 'list') {
+    document.getElementById('events-list').classList.remove('hide');
+    document.getElementById('events-table').classList.add('hide');
+  } else {
+    document.getElementById('events-list').classList.add('hide');
+    document.getElementById('events-table').classList.remove('hide');
+  }
+}
+
+document.getElementById('by-list').addEventListener('click', () => handleChangeVision('list'));
+document.getElementById('by-table').addEventListener('click', () => handleChangeVision('table'));
 
 function handleRemoveEvent(e, id) {
   e.preventDefault();
@@ -16,15 +28,19 @@ function loadEvents(search) {
     events = events.filter(event => event.title.includes(search))
   }
 
-  const list = document.getElementById('events-list')
+  const list = document.getElementById('events-list');
+  const tableBody = document.getElementById('events-table-body');
   list.innerHTML = '';
+  tableBody.innerHTML = '';
 
   if (events.legth != 0) {
     document.getElementById('events__empty').classList.add('hide');
     list.classList.remove('hide');
     const eventTemplate = document.getElementById('event-card-template').content;
+    const eventRowTemplate = document.getElementById('event-table-row-template').content;
 
     events.forEach(event => {
+      // добавляем списко карточек
       const eventCard = eventTemplate.cloneNode(true);
       eventCard.querySelector('.card-media').style.background = `url(${event.image || './public/theatre.jpg'})`
       eventCard.querySelector('.card-header').textContent = event.title;
@@ -37,6 +53,16 @@ function loadEvents(search) {
       eventCard.querySelector('.remove-button').addEventListener('click', (e) => handleRemoveEvent(e, event.id));
       eventCard.querySelector('.edit-event-button').addEventListener('click', (e) => handleOpenEditModal(e, event.id))
       list.appendChild(eventCard);
+
+      // добавляем таблицу событий
+      const eventRow = eventRowTemplate.cloneNode(true);
+      eventRow.querySelector('.cell-id').textContent = event.id;
+      eventRow.querySelector('.cell-title').textContent = event.title;
+      eventRow.querySelector('.cell-desc').textContent = event.desc;
+      eventRow.querySelector('.cell-author').textContent = event.author;
+      eventRow.querySelector('.cell-date').textContent = event.date;
+      eventRow.querySelector('.cell-place').textContent = event.place;
+      tableBody.appendChild(eventRow);
     })
   }
 }

@@ -48,6 +48,14 @@
             <img src="./public/search.svg"></img>
           </button>
         </form>
+        <div class="vision-info">
+          <button id="by-list" class="change-visible">
+            В виде списка
+          </button>
+          <button id="by-table" class="change-visible">
+            В виде таблицы
+          </button>
+        </div>
       </section>
       <section class="events wrapper">  
         <div id='events__empty' class="events__empty">
@@ -59,6 +67,32 @@
         <ul id="events-list" class="hide events-list">
 
         </ul>
+        <table id="events-table" class="hide events-table">
+          <thead>
+            <tr>
+              <th scope="col">
+                ID
+              </th>
+              <th scope="col">
+                Title
+              </th>
+              <th scope="col">
+                Description
+              </th>
+              <th scope="col">
+                Author
+              </th>
+              <th scope="col">
+                Date
+              </th>
+              <th scope="col">
+                Place
+              </th>
+            </tr>
+          </thead>
+          <tbody id="events-table-body">
+          </tbody>
+        </table>
       </section>
     </main>
     <nav class="nav_bar">
@@ -179,6 +213,28 @@
           </button>
         </div>
       </div>
+    </template>
+    <template id="event-table-row-template">
+      <tr>
+        <td class="cell-id">
+
+        </td>
+        <td class="cell-title">
+          
+        </td>
+        <td class="cell-desc">
+
+        </td>
+        <td class="cell-author">
+          
+        </td>
+        <td class="cell-date">
+
+        </td>
+        <td class="cell-place">
+          
+        </td>
+      </tr>
     </template>
     <template id="active-user-template">
       <li class="active-user">
