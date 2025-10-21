@@ -5,7 +5,6 @@ import { logout, user } from "./api.js";
 const links = document.getElementsByClassName('nav_link');
 const page = document.location.pathname;
 
-console.log(page);
 Array.from(links).forEach(link => {
   if (((page == '/' || page == '/index.html') && link.getAttribute('href') == './index.html') || 
   (page == '/main.html' && link.getAttribute('href') == './main.html') ||
@@ -14,18 +13,6 @@ Array.from(links).forEach(link => {
     link.classList.add('active');
   }
 })
-
-// мобильное меню
-
-const menuButton = document.getElementById('menu-bar');
-const menuList = document.getElementById('header__menu__list');
-
-function handleChangeVisible() {
-  menuList.classList.toggle('enable');
-  menuList.classList.toggle('disable');
-}
-
-menuButton.addEventListener('click', handleChangeVisible);
 
 // вход в аккаунт и выход из аккаунта пользователя
 
