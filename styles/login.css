@@ -44,3 +44,17 @@ p.body1 {
 p.body1 a {
   color: var(--secondary);
 }
+
+@media screen and (max-width: 640px) {
+  form {
+    margin: 0 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  form {
+    margin: 0 20px;
+    width: 100%;
+  }
+}
