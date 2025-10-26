@@ -10,6 +10,11 @@ function handleChangeVision(param) {
     document.getElementById('events-list').classList.add('hide');
     document.getElementById('events-table').classList.remove('hide');
   }
+  if (store.getEvents().length == 0) {
+    document.getElementById('events-list').classList.add('hide');
+    document.getElementById('events-table').classList.add('hide');
+    document.getElementById('events__empty').classList.remove('hide');
+  }
 }
 
 document.getElementById('by-list').addEventListener('click', () => handleChangeVision('list'));
@@ -30,10 +35,11 @@ function loadEvents(search) {
 
   const list = document.getElementById('events-list');
   const tableBody = document.getElementById('events-table-body');
+  const table = document.getElementById('events-table');
   list.innerHTML = '';
   tableBody.innerHTML = '';
 
-  if (events.legth != 0) {
+  if (events.length != 0) {
     document.getElementById('events__empty').classList.add('hide');
     list.classList.remove('hide');
     const eventTemplate = document.getElementById('event-card-template').content;
@@ -64,6 +70,11 @@ function loadEvents(search) {
       eventRow.querySelector('.cell-place').textContent = event.place;
       tableBody.appendChild(eventRow);
     })
+  }
+  else {
+    list.classList.add('hide');
+    table.classList.add('hide');
+    document.getElementById('events__empty').classList.remove('hide')
   }
 }
 
