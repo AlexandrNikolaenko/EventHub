@@ -7,18 +7,18 @@ const navBarLinks = document.getElementsByClassName('nav_bar__link');
 const page = document.location.pathname;
 
 Array.from(links).forEach(link => {
-  if (((page == '/' || page == '/index.html') && link.getAttribute('href') == './index.html') || 
-  (page == '/main.html' && link.getAttribute('href') == './main.html') ||
-  (page == '/about.html' && link.getAttribute('href') == './about.html')
+  if (((page == '/' || page == '/index') && link.getAttribute('href') == '/') || 
+  (page == '/main/' && link.getAttribute('href') == '/main') ||
+  (page == '/about/' && link.getAttribute('href') == '/about')
   ) {
     link.classList.add('active');
   }
 });
 
 Array.from(navBarLinks).forEach(link => {
-  if (((page == '/' || page == '/index.html') && link.getAttribute('href') == './index.html') || 
-  (page == '/main.html' && link.getAttribute('href') == './main.html') ||
-  (page == '/about.html' && link.getAttribute('href') == './about.html')
+  if (((page == '/' || page == '/') && link.getAttribute('href') == '/') || 
+  (page == '/main/' && link.getAttribute('href') == '/main') ||
+  (page == '/abou/' && link.getAttribute('href') == '/about')
   ) {
     link.classList.add('active');
   }

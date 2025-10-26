@@ -120,7 +120,7 @@ export function login({password, email}) {
   if (newUser) {
     if (newUser.password == password) {
       user.updateUser(email);
-      window.location.assign('./main.html');
+      window.location.assign('/main');
       return ;
     } else {
       throw new Error(JSON.stringify({ type: "password", message: "Неверный пароль" }))
@@ -137,7 +137,7 @@ export function register({name, email, password }) {
   } else {
     store.setUser({name, email, password });
     user.updateUser(email)
-    window.location.assign('./main.html')
+    window.location.assign('/main')
     return;
   }
 }
