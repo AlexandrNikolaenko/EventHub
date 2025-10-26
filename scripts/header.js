@@ -9,7 +9,8 @@ const page = document.location.pathname;
 Array.from(links).forEach(link => {
   if (((page == '/' || page == '/index') && link.getAttribute('href') == '/') || 
   (page == '/main/' && link.getAttribute('href') == '/main') ||
-  (page == '/about/' && link.getAttribute('href') == '/about')
+  (page == '/about/' && link.getAttribute('href') == '/about') ||
+  (page == '/poster/' && link.getAttribute('href') == '/poster')
   ) {
     link.classList.add('active');
   }

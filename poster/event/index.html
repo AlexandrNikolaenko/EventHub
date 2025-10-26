@@ -33,32 +33,9 @@
             </div>
         </nav>
     </header>
-    <main class="wrapper">
-      <h2>Афиша мероприятий</h2>
-      <section id="filter-section">
-        <form id="search-form" class="search-events">
-          <input class="search__input" name="search" placeholder="Найти мероприятие по названию">
-          </input>
-          <button type="submit" class="search__button">
-            <img src="/public/search.svg"></img>
-          </button>
-        </form>
-      </section>
-      <section id="poster-section">
-        <span id="query-error" class="h6 hide"></span>
-        <div id='poster__empty' class="hide poster__empty">
-          <span class="h6">
-            Ничего не нашлось :(
-          </span>
-          <p class="body1">У вас сейчас нет активных мероприятий, но вы можете создать новое</p>
-        </div>
-        <ul id="poster-list">
-          <li class="preloader"></li>
-          <li class="preloader"></li>
-          <li class="preloader"></li>
-          <li class="preloader"></li>
-          <li class="preloader"></li>
-        </ul>
+    <main>
+      <section>
+        
       </section>
     </main>
     <nav class="nav_bar">
@@ -109,24 +86,6 @@
             <p id="load-time">Адрес: г. Москва, ул. Примерная, 1</p>
         </div>
     </footer>
-    <template id="post-template">
-      <li class="post">
-        <div class="post-media">
-          <img>
-        </div>
-        <div class="post-content">
-          <h6></h6>
-          <p></p>
-          <span class="date"></span>
-          <span class="place"></span>
-        </div>
-        <div class="post-action">
-          <a>
-            <button class="primary">Посмотреть</button>
-          </a>
-        </div>
-      </li>
-    </template>
     <script>
       (function() {
         window.addEventListener('load', function() {
