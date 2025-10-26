@@ -2,12 +2,12 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="о нас, команда, eventhub, мероприятия">
-    <meta name="description" content="Информация о команде проекта EventHub">
+    <meta name="keywords" content="мероприятия, афиша, бронирование, события">
+    <meta name="description" content="Система управления событиями: афиша, бронирование и организация мероприятий">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>О нас — EventHub</title>
+    <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="/styles/global.css">
-    <link rel="stylesheet" href="/styles/about.css">
+    <link rel="stylesheet" href="/styles/poster.css">
     <script type="module" src="/scripts/api.js"></script>
 </head>
 <body>
@@ -32,64 +32,10 @@
             </div>
         </nav>
     </header>
+    <main>
+      <section>
 
-    <main class="wrapper">
-        <section>
-          <h1>О нас</h1>
-          <p class="h6">
-              Добро пожаловать в <strong>EventHub</strong> — систему для организации 
-              <em>публичных</em> и <em>частных</em> мероприятий.  
-              Мы верим, что любые события, от больших концертов до семейных встреч, 
-              заслуживают удобного планирования.
-          </p>
-        </section>
-        <section>
-            <h2>Наша миссия</h2>
-            <blockquote>
-                «Мы создаём платформу, которая помогает людям быть вместе и делиться впечатлениями.»  
-                <cite>— команда EventHub</cite>
-            </blockquote>
-        </section>
-        <section>
-            <h2>Что мы предлагаем</h3>
-            <ul>
-                <li><span>1</span><p class="body1">Афишу публичных мероприятий с удобным бронированием</p></li>
-                <li><span>2</span><p class="body1">Закрытые события для компаний и друзей</p></li>
-                <li><span>3</span><p class="body1">Личный кабинет с историей участия</p></li>
-                <li><span>4</span><p class="body1">Уведомления и напоминания</p></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Как работает система</h2>
-            <ol>
-                <li class="body1">Пользователь выбирает мероприятие из афиши или создаёт своё.</li>
-                <div class="step-arrow"></div>
-                <li class="body1">Бронирует место или рассылает приглашения.</li>
-                <div class="step-arrow"></div>
-                <li class="body1">Получает подтверждение и наслаждается событием 🎉</li>
-            </ol>
-        </section>
-        <section class="code-section">
-            <div>
-                <h2>Сниппет кода</h2>
-                <p>Ниже пример, как может выглядеть бронирование события в будущем API:</p>
-            </div>
-            <pre><code>
-// Пример REST-запроса
-POST /api/bookings
-{
-    "eventId": 123,
-    "userId": 456
-}
-            </code></pre>
-        </section>
-        <section class="phylosofy-section">
-            <h2>Философия</h2>
-            <p class="body1">
-                Мы <del>не любим хаос</del> <ins>ценим порядок</ins> в организации мероприятий, 
-                поэтому EventHub создан для тех, кто хочет планировать легко.
-            </p>
-        </section>
+      </section>
     </main>
     <nav class="nav_bar">
         <div class="wrapper">
