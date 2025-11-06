@@ -48,7 +48,7 @@ function loadEvents(search) {
     events.forEach(event => {
       // добавляем списко карточек
       const eventCard = eventTemplate.cloneNode(true);
-      eventCard.querySelector('.card-media').style.background = `url(${event.image || './public/theatre.jpg'})`
+      eventCard.querySelector('.card-media').style.background = `url(${event.image || '../public/theatre.jpg'})`
       eventCard.querySelector('.card-header').textContent = event.title;
       eventCard.querySelector('.event-author').textContent = event.author;
       eventCard.querySelector('.event-description').textContent = event.desc;
