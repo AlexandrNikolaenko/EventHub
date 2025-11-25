@@ -21,7 +21,7 @@ function handleSuccess(data) {
     post.querySelector('p').textContent = elem.description;
     post.querySelector('.date').textContent = elem.date;
     post.querySelector('.place').textContent = elem.place;
-    post.querySelector('a').setAttribute('href', '/poster/event?id=' + elem.id);
+    post.querySelector('a').setAttribute('href', '/EventHub/poster/event?id=' + elem.id);
     
     list.appendChild(post);
   })

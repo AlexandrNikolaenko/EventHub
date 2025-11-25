@@ -7,19 +7,18 @@ const navBarLinks = document.getElementsByClassName('nav_bar__link');
 const page = document.location.pathname;
 
 Array.from(links).forEach(link => {
-  if (((page == '/' || page == '/index') && link.getAttribute('href') == '/') || 
-  (page == '/main/' && link.getAttribute('href') == '/main') ||
-  (page == '/about/' && link.getAttribute('href') == '/about') ||
-  (page == '/poster/' && link.getAttribute('href') == '/poster')
+  if (((page == '/EventHub/' || page == '/EventHub/') && link.getAttribute('href') == '/EventHub/') || 
+  (page == '/EventHub/main/' && link.getAttribute('href') == '/EventHub/main') ||
+  (page == '/EventHub/about/' && link.getAttribute('href') == '/EventHub/about')
   ) {
     link.classList.add('active');
   }
 });
 
 Array.from(navBarLinks).forEach(link => {
-  if (((page == '/' || page == '/') && link.getAttribute('href') == '/') || 
-  (page == '/main/' && link.getAttribute('href') == '/main') ||
-  (page == '/abou/' && link.getAttribute('href') == '/about')
+  if (((page == '/EventHub/' || page == '/EventHub/') && link.getAttribute('href') == '/EventHub/') || 
+  (page == '/EventHub/main/' && link.getAttribute('href') == '/EventHub/main') ||
+  (page == '/EventHub/about/' && link.getAttribute('href') == '/EventHub/about')
   ) {
     link.classList.add('active');
   }
