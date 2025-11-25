@@ -45,7 +45,7 @@ export default class Api {
 
   async getEvent(id, onSuccess, onError) {
     return await this.#httpRequest.get({
-      query: '/event/' + id,
+      query: '/events/' + id,
       onSuccess, 
       onError
     });

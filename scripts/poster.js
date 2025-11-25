@@ -16,7 +16,7 @@ function handleSuccess(data) {
 
   data.forEach((elem) => {
     const post = postTemplate.cloneNode(true);
-    post.querySelector('img').setAttribute('src', elem.image);
+    post.querySelector('.post-media').style = "background-image: url(" + elem.image + ")";
     post.querySelector('h6').textContent = elem.title;
     post.querySelector('p').textContent = elem.description;
     post.querySelector('.date').textContent = elem.date;
@@ -34,8 +34,6 @@ function handleError(e) {
   switch (e.message) {
     case '500':
       message = 'Сервер не отвечает' + message;
-    case '429':
-      message = 'К сожалению, вы были заблокированы' + message;
     case '429':
       message = 'К сожалению, вы были заблокированы' + message;
   }
