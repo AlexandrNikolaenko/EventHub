@@ -24,7 +24,9 @@ p.h6 {
   max-width: 1000px;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -79,7 +81,7 @@ ol li {
 }
 
 .step-arrow {
-  background: url('../public/step-arrow.svg');
+  background: url("../public/step-arrow.svg");
   min-width: 48px;
   height: 48px;
 }
@@ -108,26 +110,26 @@ ol li {
 }
 
 blockquote {
-    font-style: italic;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    border-left: 4px solid var(--secondary);
-    padding: 10px;
-    margin: 15px 0;
-    filter: var(--shadow-light);
+  font-style: italic;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  border-left: 4px solid var(--secondary);
+  padding: 10px;
+  margin: 15px 0;
+  filter: var(--shadow-light);
 }
 
 pre {
-    background: #222;
-    color: #f8f8f2;
-    padding: 10px;
-    border-radius: 6px;
-    overflow-x: auto;
+  background: #222;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
 }
 
 code {
-    font-family: "Courier New", monospace;
+  font-family: "Courier New", monospace;
 }
 
 @media screen and (max-width: 1440px) {
@@ -155,7 +157,7 @@ code {
   ol {
     flex-direction: column;
   }
-  
+
   .step-arrow {
     transform: rotate(90deg);
   }

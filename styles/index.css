@@ -1,4 +1,5 @@
-h1, h2 {
+h1,
+h2 {
   text-align: center;
 }
 
@@ -25,7 +26,7 @@ section:first-child {
 }
 
 #steps {
-  gap: 68px
+  gap: 68px;
 }
 
 #steps .block {
@@ -97,7 +98,8 @@ section:first-child {
   background-size: cover;
 }
 
-.event-card .card-header, .event-card .card-content {
+.event-card .card-header,
+.event-card .card-content {
   padding: 16px;
 }
 
@@ -179,13 +181,16 @@ section:first-child {
   gap: 30px;
 }
 
-h1 span, h2 span, h4 span {
+h1 span,
+h2 span,
+h4 span {
   color: var(--secondary);
 }
 
-h1, h6 {
+h1,
+h6 {
   text-align: center;
-} 
+}
 
 .event-card {
   min-width: 320px;
@@ -225,7 +230,7 @@ h1, h6 {
   .why-card {
     padding: 30px;
   }
-  
+
   #who .block {
     gap: 20px;
   }
@@ -255,5 +260,4 @@ h1, h6 {
 }
 
 @media screen and (max-width: 425px) {
-
 }

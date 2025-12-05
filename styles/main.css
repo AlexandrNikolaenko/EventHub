@@ -12,15 +12,17 @@ main {
   gap: 20px;
 }
 
-.append-event, .vision-info {
+.append-event,
+.vision-info {
   display: flex;
   gap: 20px;
 }
 
-button.create-event, button.change-visible {
+button.create-event,
+button.change-visible {
   padding: 10px 0;
   margin: 0;
-  background-color: rgba(96, 125, 139, .15);
+  background-color: rgba(96, 125, 139, 0.15);
   color: var(--primary-light);
   border: var(--primary-light) dashed 2px;
   border-radius: 10px;
@@ -50,21 +52,25 @@ button.gen-event {
   filter: var(--shadow-light);
 }
 
-#create-event-modal, #generate-event-modal, #edit-event-modal {
+#create-event-modal,
+#generate-event-modal,
+#edit-event-modal {
   z-index: 101;
   /* padding: 50px 0 100px 0; */
   display: none;
   position: fixed;
   top: 0;
-  width: 100vw; 
+  width: 100vw;
   justify-content: center;
   height: 100vh;
   overflow-y: scroll;
   align-items: start;
-  background-color: rgba(96, 125, 139, .25);
+  background-color: rgba(96, 125, 139, 0.25);
 }
 
-#create-event-modal.active, #generate-event-modal.active, #edit-event-modal.active {
+#create-event-modal.active,
+#generate-event-modal.active,
+#edit-event-modal.active {
   display: flex;
 }
 
@@ -126,7 +132,8 @@ form.modal {
   padding: 8px 20px;
 }
 
-.search-events input:active, input:focus {
+.search-events input:active,
+input:focus {
   outline: none;
   appearance: none;
 }
@@ -152,7 +159,12 @@ form.modal {
   background-color: white;
 }
 
-.edit-event-button:hover, .edit-event-button:active, .edit-event-button:focus, button.search__button:hover, button.search__button:active, button.search__button:focus {
+.edit-event-button:hover,
+.edit-event-button:active,
+.edit-event-button:focus,
+button.search__button:hover,
+button.search__button:active,
+button.search__button:focus {
   background-color: var(--primary-contrast-text);
 }
 
@@ -161,7 +173,7 @@ form.modal {
   aspect-ratio: 1/1;
 }
 
-.events .events__empty{
+.events .events__empty {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -193,7 +205,8 @@ form.modal {
   background-size: cover;
 }
 
-.event-card .card-header, .event-card .card-content {
+.event-card .card-header,
+.event-card .card-content {
   padding: 16px;
 }
 
@@ -215,14 +228,15 @@ table {
   border: var(--primary-light) solid 1px;
 }
 
-thead, tbody {
+thead,
+tbody {
   display: contents;
   min-width: 780px;
 }
 
 tr {
   display: grid;
-  grid-template-columns: .3fr 1.3fr 2fr 1fr 1fr 1fr;
+  grid-template-columns: 0.3fr 1.3fr 2fr 1fr 1fr 1fr;
 }
 
 tr:nth-child(2n) {
@@ -241,7 +255,8 @@ td {
   border-right: 1px solid var(--primary-light);
 }
 
-th:last-child, td:last-child {
+th:last-child,
+td:last-child {
   border-right: none;
 }
 
@@ -264,7 +279,7 @@ th {
   display: none !important;
 }
 
-.users-input{
+.users-input {
   position: relative;
   width: 100%;
   display: flex;
@@ -275,13 +290,13 @@ th {
   height: min-content;
 }
 
-#users-list{
+#users-list {
   display: flex;
   flex-direction: column;
   gap: 1px;
   background-color: var(--primary);
   border-radius: 5px;
-  border: var(--primary) 1px solid; 
+  border: var(--primary) 1px solid;
   width: 200px;
   max-height: 100px;
   position: absolute;
@@ -291,7 +306,8 @@ th {
   overflow-x: hidden;
 }
 
-#users-list::-webkit-scrollbar, #users-active-list::-webkit-scrollbar {
+#users-list::-webkit-scrollbar,
+#users-active-list::-webkit-scrollbar {
   display: none;
 }
 
@@ -328,7 +344,7 @@ th {
   background-color: var(--primary-light);
 }
 
-.active-user span{
+.active-user span {
   display: block;
   color: var(--primary-contrast-text);
 }
@@ -364,7 +380,8 @@ th {
 }
 
 @media screen and (max-width: 640px) {
-  .append-event, .vision-info {
+  .append-event,
+  .vision-info {
     flex-direction: column;
   }
 

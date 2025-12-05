@@ -30,7 +30,8 @@ main {
   gap: 30px;
 }
 
-.main-info, .additional-info {
+.main-info,
+.additional-info {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -58,12 +59,12 @@ main {
   display: none;
   position: fixed;
   top: 0;
-  width: 100vw; 
+  width: 100vw;
   justify-content: center;
   height: 100vh;
   overflow-y: scroll;
   align-items: start;
-  background-color: rgba(96, 125, 139, .25);
+  background-color: rgba(96, 125, 139, 0.25);
 }
 
 #edit-event-modal.active {

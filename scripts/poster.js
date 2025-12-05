@@ -1,41 +1,44 @@
 import Api from "./http-api.js";
 
-const list = document.getElementById('poster-list');
+const list = document.getElementById("poster-list");
 const preloader = list.innerHTML;
-const postTemplate = document.getElementById('post-template').content
+const postTemplate = document.getElementById("post-template").content;
 
-function loadPoster(search='') {
+function loadPoster(search = "") {
   return new Promise((resolve, reject) => {
     const api = new Api();
     api.getEvents(resolve, reject, search);
-  })
+  });
 }
 
 function handleSuccess(data) {
-  list.innerHTML = '';
+  list.innerHTML = "";
 
   data.forEach((elem) => {
     const post = postTemplate.cloneNode(true);
-    post.querySelector('.post-media').style = "background-image: url(" + elem.image + ")";
-    post.querySelector('h6').textContent = elem.title;
-    post.querySelector('p').textContent = elem.description;
-    post.querySelector('.date').textContent = elem.date;
-    post.querySelector('.place').textContent = elem.place;
-    post.querySelector('a').setAttribute('href', '/EventHub/poster/event?id=' + elem.id);
-    
+    post.querySelector(".post-media").style =
+      "background-image: url(" + elem.image + ")";
+    post.querySelector("h6").textContent = elem.title;
+    post.querySelector("p").textContent = elem.description;
+    post.querySelector(".date").textContent = elem.date;
+    post.querySelector(".place").textContent = elem.place;
+    post
+      .querySelector("a")
+      .setAttribute("href", "/EventHub/poster/event?id=" + elem.id);
+
     list.appendChild(post);
-  })
+  });
 }
 
 function handleError(e) {
-  const error = document.getElementById('query-error');
-  let message = ':('
-  error.classList.remove('hide');
+  const error = document.getElementById("query-error");
+  let message = ":(";
+  error.classList.remove("hide");
   switch (e.message) {
-    case '500':
-      message = 'Сервер не отвечает' + message;
-    case '429':
-      message = 'К сожалению, вы были заблокированы' + message;
+    case "500":
+      message = "Сервер не отвечает" + message;
+    case "429":
+      message = "К сожалению, вы были заблокированы" + message;
   }
 }
 
@@ -43,12 +46,12 @@ function handleError(e) {
 
 function load(title) {
   console.log(title);
-  loadPoster(title ? '?title=' + encodeURI(title) : '')
+  loadPoster(title ? "?title=" + encodeURI(title) : "")
     .then((data) => {
       console.log(data);
       handleSuccess(data);
     })
-    .catch(handleError)
+    .catch(handleError);
 }
 
 load();
@@ -60,4 +63,4 @@ function handleSubmit(e) {
   e.target.reset();
 }
 
-document.getElementById('search-form').addEventListener('submit', handleSubmit)
+document.getElementById("search-form").addEventListener("submit", handleSubmit);

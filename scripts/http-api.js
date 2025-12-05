@@ -6,7 +6,7 @@ class HttpRequest {
   }
 
   async get({ onError, onSuccess, query }) {
-    let redirectPath = '';
+    let redirectPath = "";
     try {
       const res = await fetch(this.#api_host.concat(query), {
         method: "GET",
@@ -20,10 +20,10 @@ class HttpRequest {
     } catch (e) {
       console.log(e);
       if (onError) onError(e);
-      if (e.message == '401') redirectPath = '/auth/login.html';
+      if (e.message == "401") redirectPath = "/auth/login.html";
       return e;
     } finally {
-      if (redirectPath != '') window.location.assign(redirectPath);
+      if (redirectPath != "") window.location.assign(redirectPath);
     }
   }
 }
@@ -34,20 +34,20 @@ export default class Api {
   constructor() {
     this.#httpRequest = new HttpRequest();
   }
-  
-  async getEvents(onSuccess, onError, query='') {
+
+  async getEvents(onSuccess, onError, query = "") {
     return await this.#httpRequest.get({
-      query: '/events' + query,
-      onSuccess, 
-      onError
+      query: "/events" + query,
+      onSuccess,
+      onError,
     });
   }
 
   async getEvent(id, onSuccess, onError) {
     return await this.#httpRequest.get({
-      query: '/events/' + id,
-      onSuccess, 
-      onError
+      query: "/events/" + id,
+      onSuccess,
+      onError,
     });
   }
 }

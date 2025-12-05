@@ -6,7 +6,7 @@ main {
   gap: 20px;
 }
 
-.poster__empty{
+.poster__empty {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -30,7 +30,8 @@ main {
   padding: 8px 20px;
 }
 
-.search-events input:active, input:focus {
+.search-events input:active,
+input:focus {
   outline: none;
   appearance: none;
 }
@@ -94,24 +95,23 @@ main {
     align-items: start;
   }
 
-  .post-content, .post-media {
+  .post-content,
+  .post-media {
     max-width: none;
   }
-
-
 }
 
 @keyframes flickering {
   from {
-    opacity: .25;
+    opacity: 0.25;
   }
 
   50% {
-    opacity: .15;
+    opacity: 0.15;
   }
-  
+
   to {
-    opacity: .25;
+    opacity: 0.25;
   }
 }
 

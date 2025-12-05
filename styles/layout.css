@@ -24,15 +24,20 @@ header .wrapper {
   padding: 8px 22px;
   border-radius: 10px;
   background-color: transparent;
-  transition: all .15s;
+  transition: all 0.15s;
   line-height: 26px;
 }
 
-.nav_link:hover, .nav_link:focus {
-  background-color: rgba(96, 125, 139, .25);
+.nav_link:hover,
+.nav_link:focus {
+  background-color: rgba(96, 125, 139, 0.25);
 }
 
-.nav_link.active, .nav_link.active:active, .nav_link:active, .nav_link.active:hover, .nav_link.active:focus {
+.nav_link.active,
+.nav_link.active:active,
+.nav_link:active,
+.nav_link.active:hover,
+.nav_link.active:focus {
   background-color: var(--primary);
   color: var(--primary-contrast-text);
 }
@@ -64,7 +69,9 @@ nav.nav_bar {
   border-radius: 100px;
 }
 
-.nav_bar__link:active, .nav_bar__link:hover, .nav_bar__link:focus {
+.nav_bar__link:active,
+.nav_bar__link:hover,
+.nav_bar__link:focus {
   background-color: var(--primary-light);
 }
 
