@@ -30,6 +30,12 @@
   transition: all 0.15s;
 }
 
+.fade-text {
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: transform 1.2s;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;

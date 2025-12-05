@@ -35,8 +35,8 @@
 
     <main class="wrapper">
         <section>
-          <h1>О нас</h1>
-          <p class="h6">
+          <h1 class="fade-text">О нас</h1>
+          <p class="h6 typewriter">
               Добро пожаловать в <strong>EventHub</strong> — систему для организации 
               <em>публичных</em> и <em>частных</em> мероприятий.  
               Мы верим, что любые события, от больших концертов до семейных встреч, 
@@ -44,14 +44,14 @@
           </p>
         </section>
         <section>
-            <h2>Наша миссия</h2>
-            <blockquote>
+            <h2 class="fade-text">Наша миссия</h2>
+            <blockquote class="typewriter">
                 «Мы создаём платформу, которая помогает людям быть вместе и делиться впечатлениями.»  
                 <cite>— команда EventHub</cite>
             </blockquote>
         </section>
         <section>
-            <h2>Что мы предлагаем</h2>
+            <h2 class="fade-text">Что мы предлагаем</h2>
             <ul>
                 <li><span>1</span><p class="body1">Афишу публичных мероприятий с удобным бронированием</p></li>
                 <li><span>2</span><p class="body1">Закрытые события для компаний и друзей</p></li>
@@ -60,7 +60,7 @@
             </ul>
         </section>
         <section>
-            <h2>Как работает система</h2>
+            <h2 class="fade-text">Как работает система</h2>
             <ol>
                 <li class="body1">Пользователь выбирает мероприятие из афиши или создаёт своё.</li>
                 <div class="step-arrow"></div>
@@ -71,8 +71,8 @@
         </section>
         <section class="code-section">
             <div>
-                <h2>Сниппет кода</h2>
-                <p>Ниже пример, как может выглядеть бронирование события в будущем API:</p>
+                <h2 class="fade-text">Сниппет кода</h2>
+                <p class="typewriter">Ниже пример, как может выглядеть бронирование события в будущем API:</p>
             </div>
             <pre><code>
 // Пример REST-запроса
@@ -84,8 +84,8 @@ POST /api/bookings
             </code></pre>
         </section>
         <section class="phylosofy-section">
-            <h2>Философия</h2>
-            <p class="body1">
+            <h2 class="fade-text">Философия</h2>
+            <p class="body1 typewriter">
                 Мы <del>не любим хаос</del> <ins>ценим порядок</ins> в организации мероприятий, 
                 поэтому EventHub создан для тех, кто хочет планировать легко.
             </p>
@@ -151,5 +151,7 @@ POST /api/bookings
       })();
     </script>
     <script type="module" src="../scripts/header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script type="module" src="../scripts/animation.js"></script>
 </body>
 </html>
