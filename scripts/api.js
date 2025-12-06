@@ -120,7 +120,7 @@ export function login({ password, email }) {
   if (newUser) {
     if (newUser.password == password) {
       user.updateUser(email);
-      window.location.assign("/main");
+      window.location.assign("/EventHub/main");
       return;
     } else {
       throw new Error(
@@ -149,7 +149,7 @@ export function register({ name, email, password }) {
   } else {
     store.setUser({ name, email, password });
     user.updateUser(email);
-    window.location.assign("/main");
+    window.location.assign("/EventHub/main");
     return;
   }
 }
