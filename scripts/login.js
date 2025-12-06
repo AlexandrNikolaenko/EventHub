@@ -4,13 +4,20 @@ import { login } from "./api.js";
 
 const formLogin = document.getElementById("login");
 
-function validation(values) {
-  let errors = [];
-  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(values.email)) {
-    errors.push({ type: "email", message: "Некорректная почта" });
+const constraints = {
+  email: {
+    presence: { allowEmpty: false, message: "Поле обязательно" },
+    email: { message: "Введите корректный email" }
   }
-  return errors;
-}
+};
+
+// function validation(values) {
+//   let errors = [];
+//   if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(values.email)) {
+//     errors.push({ type: "email", message: "Некорректная почта" });
+//   }
+//   return errors;
+// }
 
 function initState() {
   const messages = document.getElementsByTagName("span");
@@ -24,12 +31,13 @@ function handleSubmit(e) {
   e.preventDefault();
   initState();
   const values = Object.fromEntries(new FormData(e.target));
-  const errors = validation(values);
-  if (errors.length != 0) {
-    errors.forEach((error) => {
-      const message = document.getElementById(error.type + "-error");
+  const errors = validate(values, constraints);
+  if (errors && Object.keys(errors) != 0) {
+    Object.keys(errors).forEach((key) => {
+      const error = errors[key];
+      const message = document.getElementById(key + "-error");
       message.classList.add("active");
-      message.textContent(error.message);
+      message.textContent = error[0].split(' ').slice(1).join(' ');
     });
   } else {
     try {

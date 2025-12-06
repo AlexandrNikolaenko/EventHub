@@ -11,7 +11,6 @@
     <title>EventHub — афиша мероприятий</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/login.css" />
-    <script type="module" src="../scripts/api.js"></script>
   </head>
   <body>
     <header>
@@ -39,6 +38,7 @@
           placeholder="Name"
           type="name"
         />
+        <span class="body1" id="name-error">Поле не должно быть пустым</span>
         <label for="email" class="body1">Введите почту</label>
         <input
           id="email"
@@ -202,7 +202,9 @@
         });
       })();
     </script>
-    <script type="module" src="/scripts/header.js"></script>
-    <script type="module" src="/scripts/register.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script type="module" src="../scripts/api.js"></script>
+    <script type="module" src="../scripts/header.js"></script>
+    <script type="module" src="../scripts/register.js"></script>
   </body>
 </html>
