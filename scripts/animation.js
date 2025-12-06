@@ -28,7 +28,6 @@ handleButtonHover();
 
 function fadeTitles() {
   document.querySelectorAll(".fade-text").forEach((elem) => {
-    console.log(elem);
     anime({
       targets: elem,
       opacity: 1,
