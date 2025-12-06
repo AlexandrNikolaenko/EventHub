@@ -8,29 +8,29 @@ import { register } from "./api.js";
 
 const constraints = {
   name: {
-    presence: { allowEmpty: false, message: "Поле обязательно" }
+    presence: { allowEmpty: false, message: "Поле обязательно" },
   },
 
   email: {
     presence: { allowEmpty: false, message: "Поле обязательно" },
-    email: { message: "Введите корректный email" }
+    email: { message: "Введите корректный email" },
   },
 
   password: {
     presence: { allowEmpty: false, message: "Поле обязательно" },
     length: {
       minimum: 8,
-      message: "Пароль должен быть не короче 8 символов"
-    }
+      message: "Пароль должен быть не короче 8 символов",
+    },
   },
 
   repassword: {
     presence: { allowEmpty: false, message: "Подтвердите пароль" },
     equality: {
       attribute: "password",
-      message: "Пароли не совпадают"
-    }
-  }
+      message: "Пароли не совпадают",
+    },
+  },
 };
 
 const formRegister = document.getElementById("register");
@@ -70,7 +70,7 @@ function handleSubmit(e) {
       const error = errors[key];
       const message = document.getElementById(key + "-error");
       message.classList.add("active");
-      message.textContent = error[0].split(' ').slice(1).join(' ');
+      message.textContent = error[0].split(" ").slice(1).join(" ");
     });
   } else {
     try {

@@ -7,8 +7,8 @@ const formLogin = document.getElementById("login");
 const constraints = {
   email: {
     presence: { allowEmpty: false, message: "Поле обязательно" },
-    email: { message: "Введите корректный email" }
-  }
+    email: { message: "Введите корректный email" },
+  },
 };
 
 // function validation(values) {
@@ -37,7 +37,7 @@ function handleSubmit(e) {
       const error = errors[key];
       const message = document.getElementById(key + "-error");
       message.classList.add("active");
-      message.textContent = error[0].split(' ').slice(1).join(' ');
+      message.textContent = error[0].split(" ").slice(1).join(" ");
     });
   } else {
     try {
